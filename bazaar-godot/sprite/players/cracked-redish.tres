@@ -1,0 +1,2317 @@
+[gd_resource type="SpriteFrames" load_steps=529 format=3]
+
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0000.webp" id="t1"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0001.webp" id="t2"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0002.webp" id="t3"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0003.webp" id="t4"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0004.webp" id="t5"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0005.webp" id="t6"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0006.webp" id="t7"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0007.webp" id="t8"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0008.webp" id="t9"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0009.webp" id="t10"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0010.webp" id="t11"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/e/0011.webp" id="t12"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0000.webp" id="t13"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0001.webp" id="t14"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0002.webp" id="t15"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0003.webp" id="t16"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0004.webp" id="t17"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0005.webp" id="t18"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0006.webp" id="t19"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0007.webp" id="t20"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0008.webp" id="t21"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0009.webp" id="t22"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0010.webp" id="t23"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/n/0011.webp" id="t24"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0000.webp" id="t25"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0001.webp" id="t26"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0002.webp" id="t27"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0003.webp" id="t28"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0004.webp" id="t29"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0005.webp" id="t30"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0006.webp" id="t31"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0007.webp" id="t32"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0008.webp" id="t33"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0009.webp" id="t34"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0010.webp" id="t35"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/ne/0011.webp" id="t36"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0000.webp" id="t37"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0001.webp" id="t38"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0002.webp" id="t39"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0003.webp" id="t40"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0004.webp" id="t41"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0005.webp" id="t42"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0006.webp" id="t43"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0007.webp" id="t44"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0008.webp" id="t45"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0009.webp" id="t46"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0010.webp" id="t47"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/nw/0011.webp" id="t48"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0000.webp" id="t49"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0001.webp" id="t50"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0002.webp" id="t51"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0003.webp" id="t52"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0004.webp" id="t53"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0005.webp" id="t54"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0006.webp" id="t55"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0007.webp" id="t56"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0008.webp" id="t57"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0009.webp" id="t58"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0010.webp" id="t59"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/s/0011.webp" id="t60"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0000.webp" id="t61"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0001.webp" id="t62"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0002.webp" id="t63"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0003.webp" id="t64"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0004.webp" id="t65"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0005.webp" id="t66"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0006.webp" id="t67"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0007.webp" id="t68"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0008.webp" id="t69"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0009.webp" id="t70"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0010.webp" id="t71"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/se/0011.webp" id="t72"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0000.webp" id="t73"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0001.webp" id="t74"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0002.webp" id="t75"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0003.webp" id="t76"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0004.webp" id="t77"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0005.webp" id="t78"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0006.webp" id="t79"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0007.webp" id="t80"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0008.webp" id="t81"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0009.webp" id="t82"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0010.webp" id="t83"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/sw/0011.webp" id="t84"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0000.webp" id="t85"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0001.webp" id="t86"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0002.webp" id="t87"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0003.webp" id="t88"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0004.webp" id="t89"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0005.webp" id="t90"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0006.webp" id="t91"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0007.webp" id="t92"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0008.webp" id="t93"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0009.webp" id="t94"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0010.webp" id="t95"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/idle/w/0011.webp" id="t96"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0000.webp" id="t97"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0001.webp" id="t98"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0002.webp" id="t99"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0003.webp" id="t100"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0004.webp" id="t101"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0005.webp" id="t102"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0006.webp" id="t103"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0007.webp" id="t104"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0008.webp" id="t105"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0009.webp" id="t106"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0010.webp" id="t107"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0011.webp" id="t108"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0012.webp" id="t109"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/e/0013.webp" id="t110"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0000.webp" id="t111"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0001.webp" id="t112"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0002.webp" id="t113"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0003.webp" id="t114"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0004.webp" id="t115"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0005.webp" id="t116"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0006.webp" id="t117"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0007.webp" id="t118"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0008.webp" id="t119"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0009.webp" id="t120"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0010.webp" id="t121"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0011.webp" id="t122"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0012.webp" id="t123"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/n/0013.webp" id="t124"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0000.webp" id="t125"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0001.webp" id="t126"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0002.webp" id="t127"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0003.webp" id="t128"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0004.webp" id="t129"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0005.webp" id="t130"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0006.webp" id="t131"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0007.webp" id="t132"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0008.webp" id="t133"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0009.webp" id="t134"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0010.webp" id="t135"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0011.webp" id="t136"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0012.webp" id="t137"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/ne/0013.webp" id="t138"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0000.webp" id="t139"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0001.webp" id="t140"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0002.webp" id="t141"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0003.webp" id="t142"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0004.webp" id="t143"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0005.webp" id="t144"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0006.webp" id="t145"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0007.webp" id="t146"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0008.webp" id="t147"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0009.webp" id="t148"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0010.webp" id="t149"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0011.webp" id="t150"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0012.webp" id="t151"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/nw/0013.webp" id="t152"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0000.webp" id="t153"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0001.webp" id="t154"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0002.webp" id="t155"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0003.webp" id="t156"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0004.webp" id="t157"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0005.webp" id="t158"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0006.webp" id="t159"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0007.webp" id="t160"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0008.webp" id="t161"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0009.webp" id="t162"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0010.webp" id="t163"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0011.webp" id="t164"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0012.webp" id="t165"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/s/0013.webp" id="t166"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0000.webp" id="t167"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0001.webp" id="t168"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0002.webp" id="t169"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0003.webp" id="t170"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0004.webp" id="t171"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0005.webp" id="t172"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0006.webp" id="t173"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0007.webp" id="t174"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0008.webp" id="t175"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0009.webp" id="t176"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0010.webp" id="t177"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0011.webp" id="t178"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0012.webp" id="t179"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/se/0013.webp" id="t180"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0000.webp" id="t181"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0001.webp" id="t182"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0002.webp" id="t183"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0003.webp" id="t184"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0004.webp" id="t185"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0005.webp" id="t186"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0006.webp" id="t187"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0007.webp" id="t188"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0008.webp" id="t189"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0009.webp" id="t190"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0010.webp" id="t191"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0011.webp" id="t192"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0012.webp" id="t193"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/sw/0013.webp" id="t194"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0000.webp" id="t195"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0001.webp" id="t196"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0002.webp" id="t197"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0003.webp" id="t198"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0004.webp" id="t199"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0005.webp" id="t200"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0006.webp" id="t201"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0007.webp" id="t202"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0008.webp" id="t203"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0009.webp" id="t204"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0010.webp" id="t205"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0011.webp" id="t206"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0012.webp" id="t207"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/walk/w/0013.webp" id="t208"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0000.webp" id="t209"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0001.webp" id="t210"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0002.webp" id="t211"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0003.webp" id="t212"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0004.webp" id="t213"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0005.webp" id="t214"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0006.webp" id="t215"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0007.webp" id="t216"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0008.webp" id="t217"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0009.webp" id="t218"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0010.webp" id="t219"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/e/0011.webp" id="t220"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0000.webp" id="t221"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0001.webp" id="t222"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0002.webp" id="t223"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0003.webp" id="t224"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0004.webp" id="t225"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0005.webp" id="t226"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0006.webp" id="t227"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0007.webp" id="t228"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0008.webp" id="t229"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0009.webp" id="t230"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0010.webp" id="t231"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/n/0011.webp" id="t232"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0000.webp" id="t233"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0001.webp" id="t234"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0002.webp" id="t235"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0003.webp" id="t236"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0004.webp" id="t237"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0005.webp" id="t238"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0006.webp" id="t239"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0007.webp" id="t240"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0008.webp" id="t241"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0009.webp" id="t242"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0010.webp" id="t243"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/ne/0011.webp" id="t244"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0000.webp" id="t245"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0001.webp" id="t246"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0002.webp" id="t247"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0003.webp" id="t248"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0004.webp" id="t249"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0005.webp" id="t250"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0006.webp" id="t251"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0007.webp" id="t252"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0008.webp" id="t253"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0009.webp" id="t254"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0010.webp" id="t255"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/nw/0011.webp" id="t256"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0000.webp" id="t257"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0001.webp" id="t258"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0002.webp" id="t259"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0003.webp" id="t260"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0004.webp" id="t261"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0005.webp" id="t262"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0006.webp" id="t263"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0007.webp" id="t264"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0008.webp" id="t265"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0009.webp" id="t266"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0010.webp" id="t267"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/s/0011.webp" id="t268"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0000.webp" id="t269"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0001.webp" id="t270"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0002.webp" id="t271"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0003.webp" id="t272"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0004.webp" id="t273"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0005.webp" id="t274"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0006.webp" id="t275"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0007.webp" id="t276"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0008.webp" id="t277"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0009.webp" id="t278"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0010.webp" id="t279"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/se/0011.webp" id="t280"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0000.webp" id="t281"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0001.webp" id="t282"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0002.webp" id="t283"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0003.webp" id="t284"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0004.webp" id="t285"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0005.webp" id="t286"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0006.webp" id="t287"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0007.webp" id="t288"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0008.webp" id="t289"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0009.webp" id="t290"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0010.webp" id="t291"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/sw/0011.webp" id="t292"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0000.webp" id="t293"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0001.webp" id="t294"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0002.webp" id="t295"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0003.webp" id="t296"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0004.webp" id="t297"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0005.webp" id="t298"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0006.webp" id="t299"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0007.webp" id="t300"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0008.webp" id="t301"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0009.webp" id="t302"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0010.webp" id="t303"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/run/w/0011.webp" id="t304"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0000.webp" id="t305"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0001.webp" id="t306"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0002.webp" id="t307"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0003.webp" id="t308"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0004.webp" id="t309"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0005.webp" id="t310"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0006.webp" id="t311"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0007.webp" id="t312"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0008.webp" id="t313"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0009.webp" id="t314"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0010.webp" id="t315"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0011.webp" id="t316"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0012.webp" id="t317"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/e/0013.webp" id="t318"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0000.webp" id="t319"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0001.webp" id="t320"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0002.webp" id="t321"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0003.webp" id="t322"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0004.webp" id="t323"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0005.webp" id="t324"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0006.webp" id="t325"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0007.webp" id="t326"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0008.webp" id="t327"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0009.webp" id="t328"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0010.webp" id="t329"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0011.webp" id="t330"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0012.webp" id="t331"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/n/0013.webp" id="t332"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0000.webp" id="t333"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0001.webp" id="t334"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0002.webp" id="t335"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0003.webp" id="t336"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0004.webp" id="t337"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0005.webp" id="t338"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0006.webp" id="t339"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0007.webp" id="t340"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0008.webp" id="t341"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0009.webp" id="t342"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0010.webp" id="t343"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0011.webp" id="t344"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0012.webp" id="t345"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/ne/0013.webp" id="t346"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0000.webp" id="t347"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0001.webp" id="t348"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0002.webp" id="t349"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0003.webp" id="t350"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0004.webp" id="t351"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0005.webp" id="t352"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0006.webp" id="t353"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0007.webp" id="t354"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0008.webp" id="t355"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0009.webp" id="t356"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0010.webp" id="t357"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0011.webp" id="t358"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0012.webp" id="t359"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/nw/0013.webp" id="t360"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0000.webp" id="t361"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0001.webp" id="t362"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0002.webp" id="t363"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0003.webp" id="t364"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0004.webp" id="t365"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0005.webp" id="t366"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0006.webp" id="t367"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0007.webp" id="t368"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0008.webp" id="t369"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0009.webp" id="t370"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0010.webp" id="t371"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0011.webp" id="t372"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0012.webp" id="t373"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/s/0013.webp" id="t374"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0000.webp" id="t375"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0001.webp" id="t376"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0002.webp" id="t377"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0003.webp" id="t378"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0004.webp" id="t379"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0005.webp" id="t380"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0006.webp" id="t381"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0007.webp" id="t382"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0008.webp" id="t383"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0009.webp" id="t384"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0010.webp" id="t385"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0011.webp" id="t386"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0012.webp" id="t387"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/se/0013.webp" id="t388"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0000.webp" id="t389"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0001.webp" id="t390"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0002.webp" id="t391"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0003.webp" id="t392"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0004.webp" id="t393"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0005.webp" id="t394"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0006.webp" id="t395"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0007.webp" id="t396"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0008.webp" id="t397"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0009.webp" id="t398"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0010.webp" id="t399"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0011.webp" id="t400"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0012.webp" id="t401"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/sw/0013.webp" id="t402"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0000.webp" id="t403"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0001.webp" id="t404"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0002.webp" id="t405"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0003.webp" id="t406"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0004.webp" id="t407"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0005.webp" id="t408"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0006.webp" id="t409"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0007.webp" id="t410"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0008.webp" id="t411"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0009.webp" id="t412"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0010.webp" id="t413"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0011.webp" id="t414"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0012.webp" id="t415"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/jump/w/0013.webp" id="t416"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0000.webp" id="t417"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0001.webp" id="t418"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0002.webp" id="t419"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0003.webp" id="t420"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0004.webp" id="t421"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0005.webp" id="t422"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0006.webp" id="t423"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0007.webp" id="t424"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0008.webp" id="t425"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0009.webp" id="t426"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0010.webp" id="t427"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0011.webp" id="t428"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0012.webp" id="t429"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/e/0013.webp" id="t430"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0000.webp" id="t431"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0001.webp" id="t432"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0002.webp" id="t433"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0003.webp" id="t434"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0004.webp" id="t435"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0005.webp" id="t436"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0006.webp" id="t437"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0007.webp" id="t438"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0008.webp" id="t439"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0009.webp" id="t440"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0010.webp" id="t441"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0011.webp" id="t442"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0012.webp" id="t443"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/n/0013.webp" id="t444"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0000.webp" id="t445"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0001.webp" id="t446"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0002.webp" id="t447"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0003.webp" id="t448"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0004.webp" id="t449"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0005.webp" id="t450"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0006.webp" id="t451"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0007.webp" id="t452"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0008.webp" id="t453"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0009.webp" id="t454"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0010.webp" id="t455"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0011.webp" id="t456"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0012.webp" id="t457"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/ne/0013.webp" id="t458"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0000.webp" id="t459"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0001.webp" id="t460"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0002.webp" id="t461"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0003.webp" id="t462"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0004.webp" id="t463"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0005.webp" id="t464"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0006.webp" id="t465"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0007.webp" id="t466"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0008.webp" id="t467"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0009.webp" id="t468"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0010.webp" id="t469"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0011.webp" id="t470"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0012.webp" id="t471"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/nw/0013.webp" id="t472"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0000.webp" id="t473"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0001.webp" id="t474"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0002.webp" id="t475"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0003.webp" id="t476"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0004.webp" id="t477"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0005.webp" id="t478"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0006.webp" id="t479"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0007.webp" id="t480"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0008.webp" id="t481"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0009.webp" id="t482"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0010.webp" id="t483"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0011.webp" id="t484"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0012.webp" id="t485"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/s/0013.webp" id="t486"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0000.webp" id="t487"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0001.webp" id="t488"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0002.webp" id="t489"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0003.webp" id="t490"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0004.webp" id="t491"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0005.webp" id="t492"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0006.webp" id="t493"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0007.webp" id="t494"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0008.webp" id="t495"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0009.webp" id="t496"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0010.webp" id="t497"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0011.webp" id="t498"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0012.webp" id="t499"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/se/0013.webp" id="t500"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0000.webp" id="t501"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0001.webp" id="t502"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0002.webp" id="t503"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0003.webp" id="t504"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0004.webp" id="t505"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0005.webp" id="t506"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0006.webp" id="t507"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0007.webp" id="t508"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0008.webp" id="t509"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0009.webp" id="t510"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0010.webp" id="t511"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0011.webp" id="t512"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0012.webp" id="t513"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/sw/0013.webp" id="t514"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0000.webp" id="t515"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0001.webp" id="t516"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0002.webp" id="t517"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0003.webp" id="t518"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0004.webp" id="t519"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0005.webp" id="t520"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0006.webp" id="t521"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0007.webp" id="t522"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0008.webp" id="t523"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0009.webp" id="t524"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0010.webp" id="t525"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0011.webp" id="t526"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0012.webp" id="t527"]
+[ext_resource type="Texture2D" path="res://sprite/players/cracked-redish/salute/w/0013.webp" id="t528"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t12")
+}],
+"loop": true,
+"name": &"idle_e",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t19")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t24")
+}],
+"loop": true,
+"name": &"idle_n",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t29")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t31")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t36")
+}],
+"loop": true,
+"name": &"idle_ne",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t39")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t48")
+}],
+"loop": true,
+"name": &"idle_nw",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t49")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t59")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t60")
+}],
+"loop": true,
+"name": &"idle_s",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t64")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t69")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t70")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t72")
+}],
+"loop": true,
+"name": &"idle_se",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t77")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t79")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t84")
+}],
+"loop": true,
+"name": &"idle_sw",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t89")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t90")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t91")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t92")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t93")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t94")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t95")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t96")
+}],
+"loop": true,
+"name": &"idle_w",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t97")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t98")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t99")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t100")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t101")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t102")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t103")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t104")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t105")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t106")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t107")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t108")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t109")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t110")
+}],
+"loop": true,
+"name": &"walk_e",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t111")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t112")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t113")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t114")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t115")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t116")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t117")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t118")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t119")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t120")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t121")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t122")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t123")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t124")
+}],
+"loop": true,
+"name": &"walk_n",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t125")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t126")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t127")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t128")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t129")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t130")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t131")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t132")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t133")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t134")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t135")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t136")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t137")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t138")
+}],
+"loop": true,
+"name": &"walk_ne",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t139")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t140")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t141")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t142")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t143")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t144")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t145")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t146")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t147")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t148")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t149")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t150")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t151")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t152")
+}],
+"loop": true,
+"name": &"walk_nw",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t153")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t154")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t155")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t156")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t157")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t158")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t159")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t160")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t161")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t162")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t163")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t164")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t165")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t166")
+}],
+"loop": true,
+"name": &"walk_s",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t167")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t168")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t169")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t170")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t171")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t172")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t173")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t174")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t175")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t176")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t177")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t178")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t179")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t180")
+}],
+"loop": true,
+"name": &"walk_se",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t181")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t182")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t183")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t184")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t185")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t186")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t187")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t188")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t189")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t190")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t191")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t192")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t193")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t194")
+}],
+"loop": true,
+"name": &"walk_sw",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t195")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t196")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t197")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t198")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t199")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t200")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t201")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t202")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t203")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t204")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t205")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t206")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t207")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t208")
+}],
+"loop": true,
+"name": &"walk_w",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t209")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t210")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t211")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t212")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t213")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t214")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t215")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t216")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t217")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t218")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t219")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t220")
+}],
+"loop": true,
+"name": &"run_e",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t221")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t222")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t223")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t224")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t225")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t226")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t227")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t228")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t229")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t230")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t231")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t232")
+}],
+"loop": true,
+"name": &"run_n",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t233")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t234")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t235")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t236")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t237")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t238")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t239")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t240")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t241")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t242")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t243")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t244")
+}],
+"loop": true,
+"name": &"run_ne",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t245")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t246")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t247")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t248")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t249")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t250")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t251")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t252")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t253")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t254")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t255")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t256")
+}],
+"loop": true,
+"name": &"run_nw",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t257")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t258")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t259")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t260")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t261")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t262")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t263")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t264")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t265")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t266")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t267")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t268")
+}],
+"loop": true,
+"name": &"run_s",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t269")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t270")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t271")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t272")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t273")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t274")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t275")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t276")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t277")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t278")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t279")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t280")
+}],
+"loop": true,
+"name": &"run_se",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t281")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t282")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t283")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t284")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t285")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t286")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t287")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t288")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t289")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t290")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t291")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t292")
+}],
+"loop": true,
+"name": &"run_sw",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t293")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t294")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t295")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t296")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t297")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t298")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t299")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t300")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t301")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t302")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t303")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t304")
+}],
+"loop": true,
+"name": &"run_w",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t305")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t306")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t307")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t308")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t309")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t310")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t311")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t312")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t313")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t314")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t315")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t316")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t317")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t318")
+}],
+"loop": false,
+"name": &"jump_e",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t319")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t320")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t321")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t322")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t323")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t324")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t325")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t326")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t327")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t328")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t329")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t330")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t331")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t332")
+}],
+"loop": false,
+"name": &"jump_n",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t333")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t334")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t335")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t336")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t337")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t338")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t339")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t340")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t341")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t342")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t343")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t344")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t345")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t346")
+}],
+"loop": false,
+"name": &"jump_ne",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t347")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t348")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t349")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t350")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t351")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t352")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t353")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t354")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t355")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t356")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t357")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t358")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t359")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t360")
+}],
+"loop": false,
+"name": &"jump_nw",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t361")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t362")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t363")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t364")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t365")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t366")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t367")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t368")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t369")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t370")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t371")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t372")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t373")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t374")
+}],
+"loop": false,
+"name": &"jump_s",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t375")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t376")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t377")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t378")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t379")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t380")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t381")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t382")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t383")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t384")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t385")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t386")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t387")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t388")
+}],
+"loop": false,
+"name": &"jump_se",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t389")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t390")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t391")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t392")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t393")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t394")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t395")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t396")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t397")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t398")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t399")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t400")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t401")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t402")
+}],
+"loop": false,
+"name": &"jump_sw",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t403")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t404")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t405")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t406")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t407")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t408")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t409")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t410")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t411")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t412")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t413")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t414")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t415")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t416")
+}],
+"loop": false,
+"name": &"jump_w",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t417")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t418")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t419")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t420")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t421")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t422")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t423")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t424")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t425")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t426")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t427")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t428")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t429")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t430")
+}],
+"loop": false,
+"name": &"salute_e",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t431")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t432")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t433")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t434")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t435")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t436")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t437")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t438")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t439")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t440")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t441")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t442")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t443")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t444")
+}],
+"loop": false,
+"name": &"salute_n",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t445")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t446")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t447")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t448")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t449")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t450")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t451")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t452")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t453")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t454")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t455")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t456")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t457")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t458")
+}],
+"loop": false,
+"name": &"salute_ne",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t459")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t460")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t461")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t462")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t463")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t464")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t465")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t466")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t467")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t468")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t469")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t470")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t471")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t472")
+}],
+"loop": false,
+"name": &"salute_nw",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t473")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t474")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t475")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t476")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t477")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t478")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t479")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t480")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t481")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t482")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t483")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t484")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t485")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t486")
+}],
+"loop": false,
+"name": &"salute_s",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t487")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t488")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t489")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t490")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t491")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t492")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t493")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t494")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t495")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t496")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t497")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t498")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t499")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t500")
+}],
+"loop": false,
+"name": &"salute_se",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t501")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t502")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t503")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t504")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t505")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t506")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t507")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t508")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t509")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t510")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t511")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t512")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t513")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t514")
+}],
+"loop": false,
+"name": &"salute_sw",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("t515")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t516")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t517")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t518")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t519")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t520")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t521")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t522")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t523")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t524")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t525")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t526")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t527")
+}, {
+"duration": 1.0,
+"texture": ExtResource("t528")
+}],
+"loop": false,
+"name": &"salute_w",
+"speed": 12.0
+}]

@@ -1,0 +1,17 @@
+[package]
+name = "bazaar_economy"
+edition = "2024.beta"
+version = "1.0.0"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+EVE = { local = "../EveCoinTypeStub" }
+dapp_hub = { local = "../DappHub" }
+bazaar_core = { local = "../BazaarCore" }
+bazaar_mission = { local = "../BazaarMission" }
+shared_widgets = { local = "../SharedWidgets" }
+
+[addresses]
+bazaar_economy = "0x51c61a3647a67d3970b568882292709f1178275ec6d74fec38bb83667eeb7d24"
+EVE = "0xac361aa5ceb726bd974f885c9dea9e55dc9bc98fa1f5731c5965a810707bf0b8"
+world = "0x8b8a46ed766fa1358ce7c5c51f6a164b13d627a63e45343f69ed0ba0446c1aa1"

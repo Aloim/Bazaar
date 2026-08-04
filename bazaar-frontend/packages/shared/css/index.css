@@ -1,0 +1,123 @@
+/* ============================================================
+   If this file reaches more than 500 lines, split it into
+   2 or more files to prevent bloating. Code belongs BELOW.
+   ============================================================ */
+
+/*
+ * @bazaar/shared/css/index.css — Bazaar Theme Aggregator
+ *
+ * Imports all Bazar1 CSS sections in correct cascade order.
+ * Verbatim port under OverhaulPlan1 R2 Article XIV.2 exemption.
+ * Each section file is capped at 500 lines per Article XII.3.
+ */
+
+/* 0. Documented z-index scale (Phase 7, LEAD-06) — must load first */
+@import "./bazar1/z-scale.css";
+
+/* 1. Tokens + global reset */
+@import "./bazar1/tokens-global.css";
+
+/* 2. Layout: WalletBar, Landing, Buttons, Connect/Error screen */
+@import "./bazar1/layout-wallet-landing.css";
+
+/* 3. BazarWindow, ShopCard, Badges, Modal, Listing slots, ShopView, Table, DirectTrade */
+@import "./bazar1/bazar-window-shops.css";
+
+/* 4. Inputs, form primitives, AdminPanel tabs/stats */
+@import "./bazar1/forms-inputs.css";
+
+/* 5. BazarField, FloatingShopNode, Drift animations, Responsive, Godot, Setup/Governance */
+@import "./bazar1/admin-panel-governance.css";
+
+/* 6. Dual-currency selector, InventoryPage, HUD overlay, Context menu */
+@import "./bazar1/inventory-hud.css";
+
+/* 7. Hologram labels, Announcement system, DirectTrade tabs/columns, Tribe Vault, Widget toggle */
+@import "./bazar1/animations-hologram.css";
+
+/* 8. Guestbook, Donate panel, StrangerGate, Role dropdown, Currency widget, Boot/Translation, Dissolve */
+@import "./bazar1/widgets-misc.css";
+
+/* 9. Live "type-out" proximity chat textbar (multiplayer widget) */
+@import "./bazar1/multiplayer-chat.css";
+
+/* 10. Mission (MIS) shop-type creation wizard (Slice 5) */
+@import "./bazar1/mission-wizard.css";
+
+/* 11. Mission (MIS) taker/giver view + beacon-window list (Slice 6) */
+@import "./bazar1/mission-view.css";
+
+/* 12. "A Queen's Messenger" blood-transmission dialogue + Nexus-Ѫ hub
+       (deliberately OFF-THEME — crimson ritual sci-fi, not the ember bazaar look) */
+@import "./bazar1/queen-messenger.css";
+
+/* ── Additional utilities not present in Bazar1 index.css ─────────────────── */
+
+.textarea {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.5rem 0.65rem;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  width: 100%;
+  resize: vertical;
+  outline: none;
+  min-height: 80px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.textarea:focus {
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 0 2px rgba(204, 112, 0, 0.25);
+}
+
+.form-hint    { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+.success-text { font-size: 0.8rem; color: var(--success); }
+
+/* FloatingPanel — pointer-events + max-size guards (extends .floating-panel from inventory-hud.css) */
+.floating-panel {
+  pointer-events: auto;
+  max-width: calc(100vw - 24px);
+  max-height: calc(100vh - 24px);
+}
+
+.floating-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(204, 112, 0, 0.3);
+  padding-bottom: 8px;
+}
+
+.floating-panel__title {
+  margin: 0;
+  color: #cc7000;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.floating-panel__close {
+  background: transparent;
+  border: none;
+  color: #cc7000;
+  cursor: pointer;
+  padding: 2px 8px;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: color 0.15s;
+}
+.floating-panel__close:hover { color: var(--accent2); }
+
+.floating-panel__body { overflow-y: auto; overflow-x: hidden; }
+
+/* WalletBar z-index override (shared package needs higher z-index than Bazar1's z-index: 10) */
+.wallet-bar { z-index: 50; }
+
+/* ============================================================
+   Code belongs ABOVE this comment. If this file reaches more
+   than 500 lines, split it into 2 or more files.
+   ============================================================ */

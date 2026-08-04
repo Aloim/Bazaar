@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "noFallthroughCasesInSwitch": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom", "node"],
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": false,
+    "paths": {
+      "@bazaar/shared/*": ["./packages/shared/*"],
+      "@bazaar/shared": ["./packages/shared/index"],
+      "@bazaar/widgets/*": ["./packages/widgets/*"]
+    }
+  },
+  "include": [
+    "test-setup.ts",
+    "vitest.config.ts",
+    "packages/shared/**/*.ts",
+    "packages/shared/**/*.tsx",
+    "packages/widgets/**/*.ts",
+    "packages/widgets/**/*.tsx"
+  ],
+  "exclude": ["node_modules", "dist", "**/dist/**"]
+}

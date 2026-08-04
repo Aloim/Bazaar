@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://chatbubble001"]
+
+[ext_resource type="Script" path="res://scripts/chat_bubble.gd" id="1_chatbubble"]
+
+[node name="ChatBubble" type="Node2D"]
+z_index = 4096
+z_as_relative = false
+script = ExtResource("1_chatbubble")
+
+[node name="Line1" type="Label" parent="."]
+offset_left = -120.0
+offset_top = -68.0
+offset_right = 120.0
+offset_bottom = -46.0
+theme_override_colors/font_color = Color(1, 0.94, 0.85, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.01, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line2" type="Label" parent="."]
+offset_left = -120.0
+offset_top = -46.0
+offset_right = 120.0
+offset_bottom = -24.0
+theme_override_colors/font_color = Color(1, 0.94, 0.85, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.01, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Line3" type="Label" parent="."]
+offset_left = -120.0
+offset_top = -24.0
+offset_right = 120.0
+offset_bottom = -2.0
+theme_override_colors/font_color = Color(1, 0.78, 0.42, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.03, 0.01, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HideTimer" type="Timer" parent="."]
+one_shot = true
+wait_time = 5.0

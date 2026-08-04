@@ -1,0 +1,16 @@
+[package]
+name = "bazaar_core"
+edition = "2024.beta"
+version = "1.0.0"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+EVE = { local = "../EveCoinTypeStub" }
+dapp_hub = { local = "../DappHub" }
+shared_widgets = { local = "../SharedWidgets" }
+WorldStub = { local = "../WorldStub" }
+
+[addresses]
+bazaar_core = "0xe410963aa069ae1e8b2114984787201fcf50ffc9d9a0b5ccb59148b86e88f911"
+EVE = "0xac361aa5ceb726bd974f885c9dea9e55dc9bc98fa1f5731c5965a810707bf0b8"
+world = "0x8b8a46ed766fa1358ce7c5c51f6a164b13d627a63e45343f69ed0ba0446c1aa1"

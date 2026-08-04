@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Tribe Bazaar</title>
+    <link rel="icon" type="image/png" href="/advanced/bazaar-logo.png" />
+    <!-- Polyfills for Frontier CEF (Chrome 122 — missing AbortSignal.any/timeout) -->
+    <script>
+      if (typeof AbortSignal.timeout !== "function") {
+        AbortSignal.timeout = function(ms) {
+          var c = new AbortController();
+          setTimeout(function() { c.abort(new DOMException("TimeoutError", "TimeoutError")); }, ms);
+          return c.signal;
+        };
+      }
+      if (typeof AbortSignal.any !== "function") {
+        AbortSignal.any = function(signals) {
+          var c = new AbortController();
+          for (var i = 0; i < signals.length; i++) {
+            (function(s) {
+              if (s.aborted) { c.abort(s.reason); return; }
+              s.addEventListener("abort", function() { c.abort(s.reason); });
+            })(signals[i]);
+          }
+          return c.signal;
+        };
+      }
+      if (typeof globalThis.structuredClone !== "function") {
+        globalThis.structuredClone = function(v) { return JSON.parse(JSON.stringify(v)); };
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div style="display:flex;align-items:center;justify-content:center;height:100vh;background:#000;color:#cc7000;font-family:'Favorit','Courier New',monospace;font-size:1.2rem">
+        Loading Advanced Tribe Bazaar...
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,399 @@
+/* ── DappHub Component Styles ────────────────────────────────────────────── */
+/* Tribe cards, SSU cards, badges, step dots, tag selectors, tables.        */
+/* Split from index.css to stay within the 500-line file limit.             */
+
+/* ── Table ────────────────────────────────────────────────────────────────── */
+.table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.table th {
+  text-align: left;
+  color: var(--accent);
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(204, 112, 0, 0.15);
+}
+.table tr:last-child td { border-bottom: none; }
+.table tbody tr:hover td { background: rgba(204, 112, 0, 0.05); }
+
+/* ── Tribe Card (Join Tribe list) ────────────────────────────────────────── */
+.tribe-card {
+  background: var(--surface);
+  border: 1px solid rgba(204, 112, 0, 0.3);
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.tribe-card:hover {
+  border-color: var(--accent);
+  box-shadow: var(--glow-sm);
+}
+
+.tribe-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tribe-card__name {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: var(--accent2);
+}
+.tribe-card__desc {
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+.tribe-card__stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.tribe-card__actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+/* ── SSU Card (My Registered SSUs) ───────────────────────────────────────── */
+.ssu-card {
+  background: var(--surface);
+  border: 1px solid rgba(204, 112, 0, 0.3);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  transition: border-color 0.15s;
+}
+.ssu-card:hover { border-color: var(--accent); }
+
+.ssu-card__id {
+  font-family: monospace;
+  color: var(--accent2);
+  font-size: 0.75rem;
+  word-break: break-all;
+  flex: 1;
+}
+.ssu-card__tribe {
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+.ssu-card__url {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+/* ── Badge ────────────────────────────────────────────────────────────────── */
+.badge {
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.badge--active { background: var(--success); color: #000; }
+.badge--pending { background: rgba(204, 112, 0, 0.25); color: var(--accent2); border: 1px solid var(--accent); }
+.badge--inactive { background: rgba(136, 136, 136, 0.15); color: var(--muted); border: 1px solid var(--muted); }
+.badge--easy { background: var(--success); color: #000; }
+.badge--advanced { background: var(--accent); color: #000; }
+.badge--open { background: rgba(85, 170, 85, 0.2); color: var(--success); border: 1px solid var(--success); }
+.badge--closed { background: rgba(204, 34, 0, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+.badge--owner { background: var(--accent); color: var(--bg); box-shadow: var(--glow-sm); }
+.badge--frozen { background: rgba(100, 149, 237, 0.2); color: #6495ed; border: 1px solid #6495ed; }
+.badge--depreciated { background: rgba(204, 34, 0, 0.2); color: var(--danger); border: 1px solid var(--danger); }
+.badge--in-progress { background: rgba(204, 112, 0, 0.2); color: var(--accent2); border: 1px solid var(--accent); }
+
+/* ── Step Dots (wizard) ──────────────────────────────────────────────────── */
+.step-dots { display: flex; gap: 6px; justify-content: center; }
+.step-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--surface2); border: 1px solid var(--border); }
+.step-dot--active { background: var(--accent); box-shadow: var(--glow-sm); }
+.step-dot--done { background: var(--success); border-color: var(--success); }
+
+/* ── Tag Selector ────────────────────────────────────────────────────────── */
+.tag-selector { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tag-btn {
+  background: var(--surface2);
+  border: 1px solid rgba(204, 112, 0, 0.3);
+  border-radius: 3px;
+  padding: 0.25rem 0.6rem;
+  color: var(--muted);
+  font-family: var(--font);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.tag-btn:hover { border-color: var(--accent); color: var(--text); }
+.tag-btn--active {
+  background: rgba(204, 112, 0, 0.15);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Accordion Row (TribesTab) ───────────────────────────────────────────── */
+.accordion-list { display: flex; flex-direction: column; gap: 0.25rem; }
+
+.accordion-row {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+.accordion-row--open { border-color: var(--accent); }
+
+.accordion-row__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  background: var(--surface);
+  user-select: none;
+  transition: background 0.12s;
+}
+.accordion-row__header:hover { background: var(--surface2); }
+
+.accordion-row__chevron {
+  font-size: 0.65rem;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.accordion-row__name {
+  font-weight: bold;
+  color: var(--accent2);
+  font-size: 0.9rem;
+}
+.accordion-row__meta {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.accordion-row__body {
+  max-height: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: max-height 0.25s ease;
+  background: var(--bg);
+}
+.accordion-row__body--open { max-height: 600px; }
+
+.accordion-row__ssu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+}
+.accordion-row__ssu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.3rem 1.25rem;
+  border-bottom: 1px solid rgba(204, 112, 0, 0.08);
+  font-size: 0.78rem;
+}
+.accordion-row__ssu-item:last-child { border-bottom: none; }
+.accordion-row__ssu-id { font-family: monospace; color: var(--accent2); flex: 1; }
+.accordion-row__ssu-owner { font-family: monospace; color: var(--muted); font-size: 0.7rem; }
+
+/* ── Tribe Create Button (LandingPage) ───────────────────────────────────── */
+.tribe-create-btn__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 340px;
+  transition: transform 0.2s ease;
+}
+.tribe-create-btn__wrapper--expanded { transform: scale(1.03); }
+
+.tribe-create-btn__desc {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  padding: 0 0.75rem;
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.tribe-create-btn__desc--visible {
+  max-height: 400px;
+  opacity: 1;
+  padding: 0.5rem 0.75rem;
+}
+.tribe-create-btn__fee {
+  margin-top: 0.3rem;
+  color: var(--accent2);
+  font-size: 0.78rem;
+}
+
+/* ── Detail Window (TribeDetailsWindow, SSUDetailsWindow) ────────────────── */
+.detail-window {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail-window__card {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  box-shadow: var(--glow-sm);
+  padding: 1.25rem 1.5rem;
+  width: min(480px, 92vw);
+  max-height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.detail-window__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.detail-window__title { color: var(--accent2); margin: 0; }
+.detail-window__divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0.25rem 0;
+}
+.detail-window__danger-zone { display: flex; flex-direction: column; gap: 0.25rem; }
+.detail-window__danger-label { color: var(--danger); font-size: 0.8rem; font-weight: bold; margin: 0; }
+
+/* ── Detail Row (label/value pairs) ─────────────────────────────────────── */
+.detail-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 0.83rem;
+}
+.detail-row__label {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+  width: 160px;
+}
+.detail-row__value { color: var(--text); word-break: break-all; }
+
+/* ── Copy Button ─────────────────────────────────────────────────────────── */
+.copy-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.68rem;
+  padding: 1px 5px;
+  margin-left: 0.4rem;
+  transition: color 0.15s, border-color 0.15s;
+  vertical-align: middle;
+}
+.copy-btn:hover { color: var(--accent2); border-color: var(--accent2); }
+
+/* ── Tax Override Section ────────────────────────────────────────────────── */
+.tax-override-section { display: flex; flex-direction: column; gap: 0.4rem; }
+.tax-override-section__heading {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--accent);
+  margin: 0;
+}
+.tax-override-section__exempt-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+.tax-override-section__field { display: flex; flex-direction: column; gap: 0.25rem; }
+
+/* ── Confirm Dialog ──────────────────────────────────────────────────────── */
+.confirm-dialog {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.confirm-dialog__card {
+  background: var(--surface);
+  border: 1px solid var(--danger);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  width: min(400px, 90vw);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.confirm-dialog__title { color: var(--danger); margin: 0; font-size: 1rem; }
+.confirm-dialog__warning {
+  background: rgba(204, 34, 0, 0.1);
+  border: 1px solid rgba(204, 34, 0, 0.3);
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  font-size: 0.82rem;
+  color: var(--text);
+}
+.confirm-dialog__warning-icon {
+  color: var(--danger);
+  font-weight: bold;
+  flex-shrink: 0;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+.confirm-dialog__label { font-size: 0.82rem; color: var(--muted); margin: 0; }
+.confirm-dialog__input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.4rem 0.6rem;
+  color: var(--text);
+  font-family: monospace;
+  font-size: 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.confirm-dialog__input:focus { outline: none; border-color: var(--danger); }
+.confirm-dialog__actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+
+/* ── Danger Button variant ───────────────────────────────────────────────── */
+.btn--danger {
+  background: var(--danger);
+  color: #fff;
+  border: 1px solid var(--danger);
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: var(--font);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.82rem;
+  transition: opacity 0.15s;
+}
+.btn--danger:hover:not(:disabled) { opacity: 0.85; }
+.btn--danger:disabled { opacity: 0.4; cursor: not-allowed; }

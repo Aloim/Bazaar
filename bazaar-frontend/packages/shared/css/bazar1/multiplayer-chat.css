@@ -1,0 +1,175 @@
+/* ============================================================
+   multiplayer-chat.css — live "type-out" proximity chat textbar.
+   Bottom-left of the Godot HUD. Cohesive with the in-game Bazaar
+   terminal chrome (accent #cc7000). Scales with the window (vw
+   clamps) and the user's --ui-scale setting.
+   ============================================================ */
+
+/* Bottom-left container: stacks the (focus-only) history panel above the input
+   bar. Owns the absolute positioning + UI-scale so the two scale together and
+   stay anchored to the bottom-left corner. */
+.mp-chat-wrap {
+  position: absolute;
+  left: 14px;
+  /* Sit ABOVE the bottom-left controls/scale row (.game-hud--controls, bottom:12px)
+     so the two no longer overlap. */
+  bottom: 52px;
+  z-index: var(--z-chat, 310); /* above panels + beacons, below menus/modals */
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 6px;
+
+  width: clamp(220px, 28vw, 420px);
+  /* Never let the stack exceed the viewport at large UI-scale. The clamps are
+     PRE-scale boxes; transform:scale() multiplies them visually, so divide by
+     --ui-scale to keep the SCALED width/height inside the viewport at 0.8–2×.
+     At ui-scale=1 these reduce to the original bounds (no change). */
+  max-width: calc((100vw - 28px) / var(--ui-scale, 1));
+  /* Reserve ~88px for the bottom:52px offset + a top margin so the scaled stack
+     never runs off the top of short/landscape viewports; the history scrolls. */
+  max-height: calc((100vh - 88px) / var(--ui-scale, 1));
+  font-family: var(--font-display, monospace);
+
+  /* Scale the whole stack with the user's UI-scale, anchored bottom-left. */
+  transform: scale(var(--ui-scale, 1));
+  transform-origin: left bottom;
+}
+
+/* Scrollable message history (own + nearby players) — ~7 lines tall. The speaker
+   name is repeated every 2nd line by prefixSpeakerLines (chatLines.ts). */
+.mp-chat__history {
+  width: 100%;
+  max-height: 9.5em;           /* ~7 lines + padding */
+  /* Allow the history to shrink (and keep scrolling) when the wrap's
+     max-height bites at large scale, so the input bar below stays visible. */
+  min-height: 0;
+  flex: 0 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  padding: 0.5em 0.7em;
+  font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+  line-height: 1.32;
+  color: var(--text, #e8d8c0);
+  background: linear-gradient(180deg, rgba(16, 11, 6, 0.92), rgba(10, 7, 4, 0.96));
+  border: 1px solid rgba(204, 112, 0, 0.30);
+  border-radius: 6px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(204, 112, 0, 0.5) transparent;
+}
+.mp-chat__history::-webkit-scrollbar { width: 7px; }
+.mp-chat__history::-webkit-scrollbar-thumb {
+  background: rgba(204, 112, 0, 0.45);
+  border-radius: 4px;
+}
+.mp-chat__msg-line {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.mp-chat {
+  width: 100%;
+  flex: 0 0 auto;              /* input bar keeps its size when history shrinks */
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+
+  padding: 0.42em 0.7em;
+  font-family: var(--font-display, monospace);
+  font-size: clamp(0.85rem, 1.2vw, 1.1rem);
+  line-height: 1.2;
+
+  color: var(--text, #e8d8c0);
+  background: linear-gradient(180deg, rgba(20, 15, 9, 0.82), rgba(12, 9, 5, 0.92));
+  border: 1px solid rgba(204, 112, 0, 0.32);
+  border-radius: 6px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(0, 0, 0, 0.25);
+  transition: border-color 140ms ease, box-shadow 220ms ease, background 220ms ease;
+}
+
+/* The accent chevron prompt — blinks gently when idle, steady when typing. */
+.mp-chat__prompt {
+  color: var(--accent, #cc7000);
+  font-weight: 700;
+  text-shadow: 0 0 7px rgba(204, 112, 0, 0.45);
+  animation: mp-chat-caret 1.15s steps(1, end) infinite;
+  user-select: none;
+}
+
+.mp-chat__input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: 0.01em;
+  caret-color: var(--accent, #cc7000);
+  text-overflow: ellipsis;
+}
+.mp-chat__input::placeholder {
+  color: rgba(232, 216, 192, 0.38);
+  font-style: italic;
+}
+
+/* Remaining-chars-before-scroll readout (only shown while typing). */
+.mp-chat__count {
+  flex: 0 0 auto;
+  font-size: 0.78em;
+  font-variant-numeric: tabular-nums;
+  color: rgba(232, 216, 192, 0.5);
+  user-select: none;
+}
+
+/* Live-broadcast pulse dot — only animates while there is text. */
+.mp-chat__pulse {
+  flex: 0 0 auto;
+  width: 0.55em;
+  height: 0.55em;
+  border-radius: 50%;
+  background: rgba(204, 112, 0, 0.25);
+  box-shadow: 0 0 0 0 rgba(204, 112, 0, 0);
+}
+
+/* Focused / actively-broadcasting state. */
+.mp-chat:focus-within {
+  border-color: rgba(204, 112, 0, 0.7);
+  box-shadow: 0 2px 18px rgba(204, 112, 0, 0.22), inset 0 0 0 1px rgba(204, 112, 0, 0.12);
+}
+.mp-chat--live .mp-chat__prompt { animation: none; }   /* steady caret while typing */
+.mp-chat--live .mp-chat__pulse {
+  background: var(--accent, #cc7000);
+  animation: mp-chat-pulse 1.1s ease-out infinite;
+}
+
+/* Relay not connected — others can't see your chat yet. Muted, grey dot, no pulse. */
+.mp-chat--offline { opacity: 0.92; }
+.mp-chat--offline .mp-chat__pulse {
+  background: rgba(150, 150, 150, 0.45) !important;
+  animation: none !important;
+}
+
+@keyframes mp-chat-caret {
+  0%, 55%  { opacity: 1; }
+  56%, 100% { opacity: 0.18; }
+}
+
+@keyframes mp-chat-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(204, 112, 0, 0.5); }
+  70%  { box-shadow: 0 0 0 0.5em rgba(204, 112, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(204, 112, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mp-chat__prompt,
+  .mp-chat--live .mp-chat__pulse { animation: none; }
+}

@@ -1,0 +1,107 @@
+/* ============================================================
+   TaxIndicator — EconomyFixplan Phase 6 (2026-05-08)
+   CSS-only hover-reveal infocard. No JS event handlers.
+   ============================================================ */
+
+.tax-indicator {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  font-size: 0.82rem;
+}
+
+.tax-indicator__head {
+  cursor: default;
+}
+
+.tax-indicator__head strong {
+  color: var(--accent, #c8a84b);
+}
+
+.tax-indicator__context {
+  margin-left: 0.25rem;
+}
+
+.tax-indicator--hoverable .tax-indicator__head {
+  cursor: help;
+  border-bottom: 1px dotted var(--border, #555);
+}
+
+.tax-indicator__card {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  z-index: 50;
+  min-width: 14rem;
+  max-width: 22rem;
+  padding: 0.55rem 0.7rem;
+  background: var(--surface, #181818);
+  border: 1px solid var(--border, #555);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-size: 0.78rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease-in-out;
+}
+
+.tax-indicator--hoverable:hover .tax-indicator__card,
+.tax-indicator--hoverable:focus-within .tax-indicator__card {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tax-indicator__card-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--accent, #c8a84b);
+}
+
+.tax-indicator__layers {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.tax-indicator__layer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.tax-indicator__layer-name {
+  font-weight: 600;
+}
+
+.tax-indicator__layer-value {
+  font-variant-numeric: tabular-nums;
+}
+
+.tax-indicator__layer-dest {
+  font-size: 0.7rem;
+}
+
+.tax-indicator__totals {
+  margin-top: 0.4rem;
+  padding-top: 0.3rem;
+  border-top: 1px solid var(--border, #444);
+  font-size: 0.72rem;
+}
+
+.tax-indicator__locked {
+  margin-top: 0.4rem;
+  padding-top: 0.3rem;
+  border-top: 1px solid var(--border, #444);
+  font-size: 0.72rem;
+  font-style: italic;
+}
+
+/* ============================================================
+   End TaxIndicator.css
+   ============================================================ */

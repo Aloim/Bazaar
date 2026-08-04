@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://remoteplayer001"]
+
+[ext_resource type="Script" path="res://scripts/remote_player.gd" id="1_remoteplayer"]
+[ext_resource type="SpriteFrames" uid="uid://dcxdt15jpne1" path="res://sprite/player.tres" id="2_spriteframes"]
+[ext_resource type="PackedScene" uid="uid://chatbubble001" path="res://scenes/chat_bubble.tscn" id="3_chatbubble"]
+
+[node name="RemotePlayer" type="Node2D"]
+scale = Vector2(6, 6)
+script = ExtResource("1_remoteplayer")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 30)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("2_spriteframes")
+animation = &"idle_se"
+autoplay = &"idle_se"
+centered = false
+offset = Vector2(-64, -128)
+
+[node name="NameLabel" type="Label" parent="."]
+offset_left = -7.0
+offset_top = -25.0
+offset_right = 7.0
+offset_bottom = -22.0
+scale = Vector2(0.167, 0.167)
+horizontal_alignment = 1
+text = "Player"
+
+[node name="ChatBubble" parent="." instance=ExtResource("3_chatbubble")]
+position = Vector2(0, -18)
+scale = Vector2(0.167, 0.167)

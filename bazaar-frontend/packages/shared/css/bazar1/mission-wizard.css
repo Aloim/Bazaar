@@ -1,0 +1,201 @@
+/* ============================================================
+   If this file reaches more than 500 lines, split it into
+   2 or more files to prevent bloating. Code belongs BELOW.
+   ============================================================ */
+
+/*
+ * mission-wizard.css — Mission (MIS) shop-type creation wizard (Slice 5).
+ *
+ * Styles the 6-step MissionWizard rendered inside CreateShopModal for the MIS
+ * shop kind. Extends the established EVE-Frontier modal language (orange-on-black,
+ * --accent #cc7000, Frontier mono) — reuses .step / .input / .btn / .modal__actions
+ * and only adds the bits the existing shop kinds don't have: the item-requirement
+ * rows, the per-hour duration slider, the quick-pick chips, and the review grid.
+ */
+
+/* ── Mission type pills (Step 1) ─────────────────────────────────────────────── */
+.mis-typegrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.mis-typegrid .type-btn { flex: unset; }
+
+/* ── Generic two-column field rows ───────────────────────────────────────────── */
+.mis-field        { margin-bottom: 0.9rem; }
+.mis-field__label {
+  display: block;
+  color: var(--accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+.mis-inline       { display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; }
+.mis-num          { width: 90px; }
+
+/* ── Item-requirement rows (proof + reward pickers) ──────────────────────────── */
+.mis-req-rows     { display: flex; flex-direction: column; gap: 0.45rem; }
+.mis-req-row {
+  display: grid;
+  grid-template-columns: 1fr 84px auto;
+  gap: 0.5rem;
+  align-items: center;
+}
+.mis-req-row__amt { width: 100%; text-align: right; }
+.mis-req-row__del {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 3px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  line-height: 1;
+  font-family: var(--font);
+  transition: color 0.15s, border-color 0.15s;
+}
+.mis-req-row__del:hover { color: var(--accent2); border-color: var(--accent); }
+.mis-req-resolved {
+  color: var(--accent2);
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mis-req-add {
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--accent);
+  border-radius: 3px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  transition: background 0.15s, border-color 0.15s;
+}
+.mis-req-add:hover:not(:disabled) { background: rgba(204, 112, 0, 0.08); border-color: var(--accent); }
+.mis-req-add:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* ── Trust warning (completion mode = "other") ───────────────────────────────── */
+.mis-trust {
+  border: 1px solid var(--accent);
+  background: rgba(204, 112, 0, 0.07);
+  border-radius: 3px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin-top: 0.5rem;
+}
+.mis-trust strong { color: var(--accent2); }
+
+/* ── Duration slider (Step 5) ────────────────────────────────────────────────── */
+.mis-slider-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.4rem;
+}
+.mis-slider-head__val {
+  color: var(--accent2);
+  font-weight: bold;
+  font-size: 1.15rem;
+  letter-spacing: 0.04em;
+}
+.mis-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  outline: none;
+  cursor: pointer;
+}
+.mis-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #000;
+  box-shadow: var(--glow-sm);
+  cursor: grab;
+}
+.mis-range::-webkit-slider-thumb:active { cursor: grabbing; }
+.mis-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid #000;
+  box-shadow: var(--glow-sm);
+  cursor: grab;
+}
+.mis-range-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+.mis-chips { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.6rem; }
+.mis-chip {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 3px;
+  padding: 0.25rem 0.6rem;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.76rem;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.mis-chip:hover        { color: var(--accent); border-color: var(--accent); }
+.mis-chip--active      { color: #000; background: var(--accent); border-color: var(--accent); font-weight: bold; }
+
+/* ── Live fee readout (Step 5) ───────────────────────────────────────────────── */
+.mis-fee {
+  margin-top: 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.6rem 0.75rem;
+  background: var(--surface2);
+}
+.mis-fee__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 0.12rem 0;
+  color: var(--muted);
+}
+.mis-fee__row--total {
+  color: var(--accent2);
+  font-weight: bold;
+  border-top: 1px solid var(--border);
+  margin-top: 0.3rem;
+  padding-top: 0.35rem;
+  font-size: 0.9rem;
+}
+
+/* ── Review grid (Step 6) ────────────────────────────────────────────────────── */
+.mis-review {
+  display: grid;
+  grid-template-columns: minmax(110px, max-content) 1fr;
+  gap: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+}
+.mis-review__k { color: var(--accent); letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.74rem; align-self: start; padding-top: 0.1rem; }
+.mis-review__v { color: var(--text); word-break: break-word; }
+.mis-review__v .muted { color: var(--muted); }
+
+/* ============================================================
+   Code belongs ABOVE this comment. If this file reaches more
+   than 500 lines, split it into 2 or more files.
+   ============================================================ */

@@ -1,0 +1,166 @@
+/* ============================================================
+   If this file reaches more than 500 lines, split it into
+   2 or more files to prevent bloating. Code belongs BELOW.
+   ============================================================ */
+
+/* ── WalletBar ────────────────────────────────────────────────────────────── */
+.wallet-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  box-shadow: 0 1px 0 rgba(204, 112, 0, 0.2);
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.badge--member {
+  background: var(--accent);
+  color: var(--bg);
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  margin-left: 8px;
+  letter-spacing: 0.04em;
+  box-shadow: var(--glow-sm);
+}
+
+.balance { display: flex; gap: 4px; align-items: baseline; }
+.balance__amount { color: var(--accent2); font-weight: bold; text-shadow: var(--glow-sm); }
+.balance__label  { color: var(--muted); font-size: 0.75rem; }
+
+/* ── LandingScreen ───────────────────────────────────────────────────────── */
+.landing {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; gap: 2rem; flex: 1; padding: 3rem;
+}
+
+.landing__title {
+  font-size: 2.2rem;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-shadow: var(--glow-md);
+}
+
+.landing__subtitle { color: var(--muted); font-size: 0.85rem; letter-spacing: 0.04em; }
+.landing__secondary, .landing__admin-actions { display: flex; gap: 1rem; }
+
+.landing__info {
+  display: flex; gap: 2rem; padding: 1rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  box-shadow: var(--glow-sm);
+}
+
+.landing__info-label { color: var(--muted); font-size: 0.75rem; display: block; }
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.25rem;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  transition: background 0.15s, box-shadow 0.15s, opacity 0.15s;
+}
+
+.btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: bold;
+  box-shadow: var(--glow-sm);
+}
+.btn--primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  box-shadow: var(--glow-md);
+}
+
+.btn--cta {
+  background: var(--accent);
+  color: var(--bg);
+  font-size: 1.1rem;
+  padding: 0.8rem 2.5rem;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+  box-shadow: var(--glow-md);
+}
+.btn--cta:hover:not(:disabled) {
+  background: var(--accent-hover);
+  box-shadow: 0 0 20px rgba(204, 112, 0, 0.55);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.btn--outline:hover:not(:disabled) {
+  background: rgba(204, 112, 0, 0.12);
+  box-shadow: var(--glow-sm);
+}
+
+.btn--ghost { background: transparent; color: var(--muted); font-size: 0.8rem; }
+.btn--ghost:hover:not(:disabled) { color: var(--text); }
+
+.btn--danger {
+  background: var(--danger);
+  color: #ffffff;
+}
+.btn--danger:hover:not(:disabled) { background: #dd3311; }
+
+.btn--sm  { padding: 0.3rem 0.75rem; font-size: 0.8rem; }
+.btn--refresh { flex-shrink: 0; font-size: 1.25rem; line-height: 1; min-width: 2rem; }
+.btn--lg  { padding: 0.75rem 2rem; font-size: 1rem; }
+
+.btn--link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-family: var(--font);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 0;
+  font-size: inherit;
+  transition: color 0.15s;
+}
+.btn--link:hover { color: var(--accent-hover); }
+
+.loader {
+  display: flex; align-items: center; justify-content: center;
+  flex: 1; color: var(--muted);
+}
+
+/* ── Connect / Error Screen ──────────────────────────────────────────────── */
+.connect-screen {
+  display: flex; flex-direction: column; min-height: 100vh;
+}
+.connect-screen__body {
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center; flex: 1; gap: 1rem; padding: 2rem;
+  text-align: center; color: var(--muted);
+}
+.connect-screen__title {
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  text-shadow: var(--glow-md);
+}
+.connect-screen__hint {
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
+  color: var(--accent2);
+}
+.connect-screen__error {
+  font-size: 0.8rem; color: var(--danger);
+}
+
+/* ============================================================
+   Code belongs ABOVE this comment. If this file reaches more
+   than 500 lines, split it into 2 or more files.
+   ============================================================ */

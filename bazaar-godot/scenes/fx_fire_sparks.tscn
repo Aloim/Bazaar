@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c3nvsinwx7uge"]
+
+[ext_resource type="Texture2D" uid="uid://cfy1nebiywox7" path="res://textures/fx_spark.png" id="1_spark"]
+[ext_resource type="Texture2D" uid="uid://cqicxhecyotv5" path="res://textures/fx_glow.png" id="2_glow"]
+
+[sub_resource type="Curve" id="Curve_scale"]
+_data = [Vector2(0, 0.8), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="FireSparks" type="Node2D" unique_id=1274878101]
+
+[node name="Sparks" type="CPUParticles2D" parent="." unique_id=1922429484]
+amount = 20
+texture = ExtResource("1_spark")
+lifetime = 2.03
+speed_scale = 0.74
+explosiveness = 0.07
+emission_shape = 1
+emission_sphere_radius = 8.0
+direction = Vector2(0, -1)
+spread = 30.0
+gravity = Vector2(0, -40)
+initial_velocity_min = 30.0
+initial_velocity_max = 80.0
+scale_amount_min = 0.5
+scale_amount_curve = SubResource("Curve_scale")
+
+[node name="Light" type="PointLight2D" parent="." unique_id=233864199]
+color = Color(1.2502502, 0.7862987, 0.32234716, 1)
+energy = 0.8
+texture = ExtResource("2_glow")
+texture_scale = 3.0

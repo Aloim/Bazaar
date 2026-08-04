@@ -1,0 +1,62 @@
+/* ============================================================
+   If this file reaches more than 500 lines, split it into
+   2 or more files to prevent bloating. Code belongs BELOW.
+   ============================================================ */
+
+/* ── CSS Tokens & Global Reset ────────────────────────────────────────────── */
+:root {
+  --ui-scale: 1;
+  --bg:       #000000;
+  --surface:  #0d0d0d;
+  --surface2: #161616;
+  --border:   #cc7000;
+  --accent:   #cc7000;
+  --accent2:  #e08000;
+  --accent-hover: #e08000;
+  --text:     #ffffff;
+  --muted:    #888888;
+  --danger:   #cc2200;
+  --success:  #55aa55;
+  --surface-hover:  #1a1a1a;
+  --surface-active: #1f1f1f;
+  --font:     'Favorit', 'Courier New', monospace;
+  --font-display: 'Frontier Disket Mono', 'Favorit', monospace;
+
+  /* Glow & shadow helpers */
+  --glow-sm:  0 0 6px rgba(204, 112, 0, 0.35);
+  --glow-md:  0 0 14px rgba(204, 112, 0, 0.40);
+  --shadow:   0 2px 8px rgba(0, 0, 0, 0.7);
+  --ui-scale: 1;
+
+  /* Typography scale (Phase 7 slice 7.5) — window chrome uses these four steps
+     instead of scattering fixed rems / vmin clamps. Full migration is tracked
+     in the audit ledger; new window work should consume the vars. */
+  --fs-title:   0.95rem;   /* window/section titles      */
+  --fs-body:    0.82rem;   /* body copy                  */
+  --fs-caption: 0.72rem;   /* hints, helper lines        */
+  --fs-micro:   0.62rem;   /* badges, timestamps, labels */
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root { height: 100%; overflow: hidden; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar               { width: 6px; }
+::-webkit-scrollbar-track         { background: var(--bg); }
+::-webkit-scrollbar-thumb         { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover   { background: var(--accent-hover); }
+
+.app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+
+/* ============================================================
+   Code belongs ABOVE this comment. If this file reaches more
+   than 500 lines, split it into 2 or more files.
+   ============================================================ */

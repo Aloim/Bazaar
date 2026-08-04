@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://shopnode001"]
+
+[ext_resource type="Script" uid="uid://cdhchajpah82q" path="res://scripts/shop_node.gd" id="1_shopnode"]
+[ext_resource type="SpriteFrames" uid="uid://dcxdt15jpne1" path="res://sprite/player.tres" id="2_spriteframes"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_badge"]
+font_size = 28
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 28
+font_color = Color(1, 1, 1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_panel"]
+size = Vector2(420, 90)
+
+[node name="ShopNode" type="Node2D" unique_id=1819898647]
+script = ExtResource("1_shopnode")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1385720011]
+position = Vector2(0, 30)
+scale = Vector2(3.0, 3.0)
+sprite_frames = ExtResource("2_spriteframes")
+animation = &"idle_s"
+autoplay = "idle_s"
+centered = false
+offset = Vector2(-64, -128)
+
+[node name="TitlePanel" type="PanelContainer" parent="." unique_id=2041830177]
+offset_left = -210.0
+offset_top = -460.0
+offset_right = 210.0
+offset_bottom = -370.0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TitlePanel" unique_id=1634120835]
+alignment = 1
+
+[node name="KindBadge" type="Label" parent="TitlePanel/HBoxContainer" unique_id=1877430219]
+text = "[WTS]"
+label_settings = SubResource("LabelSettings_badge")
+vertical_alignment = 1
+
+[node name="TitleLabel" type="Label" parent="TitlePanel/HBoxContainer" unique_id=1718340129]
+text = " Shop"
+label_settings = SubResource("LabelSettings_title")
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1750213766]
+z_index = 1
+input_pickable = true
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2082065605]
+position = Vector2(0, -415)
+shape = SubResource("RectangleShape2D_panel")

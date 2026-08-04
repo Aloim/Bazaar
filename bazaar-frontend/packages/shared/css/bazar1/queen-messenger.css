@@ -1,0 +1,341 @@
+/* ============================================================
+   queen-messenger.css — "A Queen's Messenger" blood-transmission UI.
+
+   Crimson ritual-sci-fi dialogue for the Courier of the Blood Queen NPC
+   beacon and the Nexus-Ѫ uplink it leads to. Deep blood-black void, vessel
+   red accents, bone scroll text, scanlines + grain + slow blood-scan sweep.
+
+   Class-only styles live here; per-element layout lives inline in
+   QueenMessengerWindow.tsx / NexusHubWindow.tsx / QueenMessengerBeacon.tsx.
+   Code belongs BELOW. 500-line guard.
+   ============================================================ */
+
+/* ── Palette ───────────────────────────────────────────────────────────── */
+:root {
+  --qmsg-void:    #07020399;   /* backdrop wash                       */
+  --qmsg-ink:     #0a0406;     /* panel base                          */
+  --qmsg-blood:   #b3121f;     /* primary blood red                   */
+  --qmsg-ember:   #e11d2a;     /* bright vessel red                   */
+  --qmsg-rust:    #6e0c14;     /* deep oxidised red                   */
+  --qmsg-bone:    #e9dcc4;     /* parchment / scroll text             */
+  --qmsg-ash:     #c9b8a8;     /* dimmer body                         */
+}
+
+/* ── Backdrop ──────────────────────────────────────────────────────────── */
+.qmsg-overlay {
+  position: fixed; inset: 0; z-index: var(--z-overlay, 600);
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(8px, 2.4vmin, 28px);
+  background:
+    radial-gradient(120% 90% at 50% 18%, rgba(120, 8, 16, 0.30), transparent 60%),
+    radial-gradient(140% 120% at 50% 120%, rgba(40, 2, 6, 0.85), rgba(3, 1, 2, 0.96) 70%),
+    rgba(3, 1, 2, 0.86);
+  backdrop-filter: blur(3px) saturate(0.85);
+  animation: qmsg-fade 0.5s ease both;
+  font-family: var(--font-display, "Segoe UI", sans-serif);
+}
+/* drifting grain + a slow crimson haze over the whole backdrop */
+.qmsg-overlay::after {
+  content: ""; position: absolute; inset: -50%;
+  background-image:
+    repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,0.018) 0 1px, transparent 1px 2px);
+  opacity: 0.5; pointer-events: none;
+  animation: qmsg-grain 5.5s steps(6) infinite;
+}
+
+/* ── Panel ─────────────────────────────────────────────────────────────── */
+.qmsg-panel {
+  position: relative;
+  width: min(980px, 96vw);
+  /* Fixed height so the panel never grows as the decree types — the scroll area
+     inside takes the overflow. (Was content-driven up to max-height, which made
+     the whole window expand line-by-line.) */
+  height: min(620px, 88vh);
+  display: flex; gap: clamp(12px, 2.4vmin, 30px);
+  padding: clamp(16px, 2.8vmin, 34px);
+  color: var(--qmsg-bone);
+  background:
+    linear-gradient(160deg, rgba(28, 6, 9, 0.96), rgba(8, 3, 4, 0.985)),
+    var(--qmsg-ink);
+  border: 1px solid rgba(225, 29, 42, 0.42);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.6) inset,
+    0 0 38px rgba(150, 10, 20, 0.30),
+    0 24px 80px rgba(0,0,0,0.7);
+  clip-path: polygon(0 14px, 14px 0, calc(100% - 28px) 0, 100% 28px,
+                     100% calc(100% - 14px), calc(100% - 14px) 100%, 28px 100%, 0 calc(100% - 28px));
+  overflow: hidden;
+  animation: qmsg-rise 0.55s cubic-bezier(0.2, 0.9, 0.2, 1) both;
+}
+/* scanlines + vignette laid over the panel */
+.qmsg-panel::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 4;
+  background:
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.16) 0 1px, transparent 1px 3px),
+    radial-gradient(120% 90% at 50% 0%, transparent 55%, rgba(0,0,0,0.5) 100%);
+  mix-blend-mode: multiply;
+}
+/* slow vertical blood-scan sweep */
+.qmsg-panel::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 28%; top: -28%; z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, rgba(225, 29, 42, 0.12) 60%, rgba(225,29,42,0.22) 80%, transparent);
+  animation: qmsg-scan 6.5s linear infinite;
+}
+/* Narrow (stacked) layout — applied by QueenMessengerWindow via matchMedia
+   (max-width: 760px). These classes are the single source for the stacked
+   shape; there is deliberately NO duplicate @media block. */
+.qmsg-panel--narrow { flex-direction: column; align-items: stretch; text-align: left; }
+.qmsg-panel--narrow .qmsg-seal { margin-left: 0; }
+.qmsg-panel--narrow .qmsg-footer { justify-content: space-between; }
+
+/* ── Portrait stage ────────────────────────────────────────────────────── */
+.qmsg-portrait {
+  position: relative; flex: 0 0 auto; z-index: 2;
+  width: clamp(150px, 26vmin, 290px);
+  align-self: stretch;
+  display: flex; align-items: flex-end; justify-content: center;
+  background:
+    radial-gradient(80% 60% at 50% 92%, rgba(225, 29, 42, 0.22), transparent 70%),
+    linear-gradient(180deg, rgba(60, 6, 10, 0.25), rgba(4, 1, 2, 0.6));
+  border: 1px solid rgba(150, 12, 20, 0.35);
+  overflow: hidden;
+}
+.qmsg-portrait--narrow { width: 100%; align-self: center; height: clamp(150px, 26vh, 260px); }
+.qmsg-portrait::before { /* rim pulse behind the courier */
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(60% 50% at 50% 60%, rgba(225, 29, 42, 0.28), transparent 72%);
+  animation: qmsg-breathe 4.4s ease-in-out infinite; pointer-events: none;
+}
+.qmsg-portrait img {
+  position: relative; z-index: 2;
+  width: 100%; height: 100%; object-fit: contain; object-position: bottom center;
+  filter: drop-shadow(0 0 16px rgba(180, 14, 22, 0.5)) contrast(1.04);
+}
+
+/* ── Body / scroll ─────────────────────────────────────────────────────── */
+/* min-height: 0 is load-bearing — in the stacked --narrow (column) layout the
+   body must be allowed to shrink below its content height or the scroll area
+   inherits full content height and the decree clips invisibly instead of
+   scrolling. */
+.qmsg-body { position: relative; z-index: 2; flex: 1 1 auto; min-width: 0; min-height: 0; display: flex; flex-direction: column; }
+.qmsg-scrollwrap { position: relative; flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+.qmsg-kicker {
+  font-size: clamp(0.56rem, 1.3vmin, 0.7rem); letter-spacing: 0.42em; text-transform: uppercase;
+  color: var(--qmsg-ember); opacity: 0.92; margin: 0 0 2px;
+}
+.qmsg-title {
+  margin: 0; font-size: clamp(1.15rem, 3.4vmin, 2.05rem); line-height: 1.02;
+  letter-spacing: 0.04em; text-transform: uppercase; font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 14px rgba(225, 29, 42, 0.6), 0 1px 0 rgba(0,0,0,0.6);
+}
+.qmsg-rule {
+  height: 1px; margin: 12px 0 14px;
+  background: linear-gradient(90deg, rgba(225,29,42,0.85), rgba(225,29,42,0.15) 60%, transparent);
+}
+.qmsg-scroll {
+  flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 0 10px 1.9em 0;
+  font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  font-size: clamp(0.82rem, 1.75vmin, 1.0rem); line-height: 1.62;
+  color: var(--qmsg-ash); cursor: pointer;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 14px, #000 calc(100% - 18px), transparent);
+          mask-image: linear-gradient(180deg, transparent, #000 14px, #000 calc(100% - 18px), transparent);
+}
+.qmsg-scroll p { margin: 0 0 0.85em; }
+.qmsg-scroll p:first-letter { color: var(--qmsg-bone); }
+.qmsg-scroll::-webkit-scrollbar { width: 6px; }
+.qmsg-scroll::-webkit-scrollbar-thumb { background: rgba(225,29,42,0.45); }
+.qmsg-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.04); }
+
+.qmsg-cursor {
+  display: inline-block; width: 0.46em; margin-left: 1px;
+  color: var(--qmsg-ember); font-family: var(--font-display, monospace); font-weight: 400;
+  animation: qmsg-blink 0.7s step-end infinite;
+}
+
+/* ── Footer / controls ─────────────────────────────────────────────────── */
+.qmsg-footer {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin-top: 14px; padding-top: 12px;
+  border-top: 1px solid rgba(150, 12, 20, 0.3);
+}
+.qmsg-skip {
+  background: none; border: 1px solid rgba(225,29,42,0.4); color: var(--qmsg-ash);
+  font-family: var(--font-display, sans-serif); font-size: 0.6rem; letter-spacing: 0.22em;
+  text-transform: uppercase; padding: 6px 12px; cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+.qmsg-skip:hover { background: rgba(225,29,42,0.16); color: #fff; border-color: rgba(225,29,42,0.8); }
+
+/* "The decree continues" chip — shown while the reader has scrolled up
+   mid-type; floats over the bottom fade of the scroll area. */
+.qmsg-resume {
+  position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 3;
+  background: rgba(20, 3, 5, 0.92); border: 1px solid rgba(225,29,42,0.55); color: var(--qmsg-bone);
+  font-family: var(--font-display, sans-serif); font-size: 0.58rem; letter-spacing: 0.2em;
+  text-transform: uppercase; padding: 6px 14px; cursor: pointer; white-space: nowrap;
+  box-shadow: 0 0 14px rgba(150, 10, 20, 0.45);
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  animation: qmsg-fade 0.25s ease both;
+}
+.qmsg-resume:hover { background: rgba(225,29,42,0.2); color: #fff; border-color: rgba(225,29,42,0.9); }
+
+/* Wax-seal "Enter the Nexus" CTA */
+.qmsg-seal {
+  position: relative; margin-left: auto;
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 11px 22px; cursor: pointer;
+  font-family: var(--font-display, sans-serif); font-size: clamp(0.66rem, 1.5vmin, 0.82rem);
+  letter-spacing: 0.24em; text-transform: uppercase; font-weight: 700; color: #fff;
+  background: linear-gradient(180deg, var(--qmsg-ember), var(--qmsg-rust));
+  border: 1px solid rgba(255, 120, 120, 0.6);
+  box-shadow: 0 0 18px rgba(225, 29, 42, 0.5), 0 0 0 1px rgba(0,0,0,0.4) inset;
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+  animation: qmsg-seal-pulse 2.6s ease-in-out infinite;
+}
+.qmsg-seal:hover { transform: translateY(-2px); filter: brightness(1.08); box-shadow: 0 0 30px rgba(225, 29, 42, 0.75); }
+.qmsg-seal:disabled { opacity: 0.32; cursor: default; animation: none; filter: grayscale(0.4); }
+.qmsg-seal__glyph { font-size: 1.05em; line-height: 1; }
+
+.qmsg-close {
+  position: absolute; top: 12px; right: 14px; z-index: 6;
+  width: 30px; height: 30px; line-height: 1; cursor: pointer;
+  background: rgba(8,2,3,0.7); color: var(--qmsg-ember);
+  border: 1px solid rgba(225,29,42,0.5); font-size: 1rem;
+  transition: background 0.18s, color 0.18s;
+}
+.qmsg-close:hover { background: rgba(225,29,42,0.22); color: #fff; }
+
+/* ── Beacon hover-name plate (in-world NPC label) ──────────────────────────
+   Deliberately understated — the courier sprite is the focal point, so the
+   label is just a faint crimson whisper above its head, not a glowing badge.
+   Keeps the blood identity via the soft-crimson text + a single hairline rule. */
+.qmsg-nameplate {
+  pointer-events: none; white-space: nowrap; text-align: center;
+  font-family: var(--font-display, sans-serif);
+  font-size: clamp(0.58rem, 1.05vmin, 0.72rem); letter-spacing: 0.08em;
+  font-weight: 500; color: #f0b9bd;
+  padding: 2px 8px 3px;
+  background: rgba(8, 2, 3, 0.42);
+  border-bottom: 1px solid rgba(225, 29, 42, 0.4);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+}
+
+/* ── Nexus-Ѫ hub (blank uplink) ────────────────────────────────────────── */
+.nexus-screen {
+  position: fixed; inset: 0; z-index: var(--z-fullscreen, 800); overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: var(--qmsg-bone); font-family: var(--font-display, sans-serif);
+  background:
+    radial-gradient(80% 60% at 50% 35%, rgba(120, 8, 16, 0.35), transparent 65%),
+    radial-gradient(140% 120% at 50% 120%, rgba(30, 2, 5, 0.95), #050102 75%),
+    #050102;
+  animation: qmsg-fade 0.45s ease both;
+}
+.nexus-screen::before { /* faint dimensional grid */
+  content: ""; position: absolute; inset: -2px; pointer-events: none; opacity: 0.16;
+  background-image:
+    linear-gradient(rgba(225,29,42,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(225,29,42,0.5) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(70% 70% at 50% 45%, #000 30%, transparent 75%);
+  animation: qmsg-grid 14s linear infinite;
+}
+.nexus-screen::after { /* scanlines */
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.18) 0 1px, transparent 1px 3px);
+}
+.nexus-sigil {
+  position: relative; z-index: 2;
+  font-size: clamp(4.5rem, 22vmin, 13rem); line-height: 1; color: var(--qmsg-ember);
+  text-shadow: 0 0 38px rgba(225, 29, 42, 0.7);
+  animation: qmsg-breathe 3.8s ease-in-out infinite;
+}
+.nexus-title {
+  position: relative; z-index: 2; margin: 8px 0 2px;
+  font-size: clamp(1.3rem, 4.6vmin, 2.8rem); letter-spacing: 0.3em; text-transform: uppercase; font-weight: 800;
+  color: #fff; text-shadow: 0 0 18px rgba(225, 29, 42, 0.6);
+}
+.nexus-sub {
+  position: relative; z-index: 2; margin: 0; font-size: clamp(0.66rem, 1.6vmin, 0.9rem);
+  letter-spacing: 0.32em; text-transform: uppercase; color: var(--qmsg-ember); opacity: 0.85;
+}
+.nexus-status {
+  position: relative; z-index: 2; margin-top: 26px;
+  font-family: Georgia, "Times New Roman", serif; font-style: italic;
+  font-size: clamp(0.8rem, 1.8vmin, 1rem); color: var(--qmsg-ash); opacity: 0.7;
+}
+.nexus-status .nexus-dots::after { content: ""; animation: qmsg-dots 1.6s steps(4, end) infinite; }
+.nexus-back {
+  position: absolute; top: clamp(14px, 3vmin, 30px); left: clamp(14px, 3vmin, 30px); z-index: 3;
+  display: inline-flex; align-items: center; gap: 9px; cursor: pointer;
+  padding: 10px 18px; color: #fff; font-weight: 700;
+  font-size: clamp(0.62rem, 1.5vmin, 0.78rem); letter-spacing: 0.2em; text-transform: uppercase;
+  background: linear-gradient(180deg, rgba(40, 5, 8, 0.9), rgba(10, 2, 4, 0.92));
+  border: 1px solid rgba(225, 29, 42, 0.6);
+  box-shadow: 0 0 16px rgba(150, 10, 20, 0.4);
+  transition: transform 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+}
+.nexus-back:hover { transform: translateX(-3px); background: rgba(225,29,42,0.2); box-shadow: 0 0 26px rgba(225,29,42,0.6); }
+
+/* ── Nexus uplink as a framed in-dapp window (loads the live hub URL) ────── */
+.nexus-screen--framed { justify-content: flex-start; align-items: stretch; padding: 0; }
+.nexus-topbar {
+  position: relative; z-index: 4; flex: 0 0 auto;
+  display: flex; align-items: center; gap: 14px;
+  padding: 10px clamp(12px, 2vmin, 22px);
+  background: linear-gradient(180deg, rgba(34, 5, 8, 0.96), rgba(10, 2, 4, 0.96));
+  border-bottom: 1px solid rgba(225, 29, 42, 0.45);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.55);
+}
+.nexus-topbar .nexus-back { position: static; top: auto; left: auto; }
+.nexus-topbar__title {
+  display: flex; align-items: baseline; gap: 10px;
+  font-size: clamp(0.74rem, 1.8vmin, 1rem); letter-spacing: 0.26em; text-transform: uppercase;
+  font-weight: 800; color: #fff; text-shadow: 0 0 14px rgba(225, 29, 42, 0.55);
+}
+.nexus-topbar__sigil { color: var(--qmsg-ember); font-size: 1.25em; text-shadow: 0 0 16px rgba(225,29,42,0.8); }
+.nexus-topbar__sub { font-size: 0.62em; letter-spacing: 0.3em; color: var(--qmsg-ember); opacity: 0.8; }
+.nexus-ext {
+  margin-left: auto; color: var(--qmsg-ash); text-decoration: none;
+  font-size: clamp(0.56rem, 1.4vmin, 0.72rem); letter-spacing: 0.2em; text-transform: uppercase;
+  padding: 7px 12px; border: 1px solid rgba(225,29,42,0.4); transition: color 0.16s, background 0.16s, border-color 0.16s;
+}
+.nexus-ext:hover { color: #fff; background: rgba(225,29,42,0.16); border-color: rgba(225,29,42,0.8); }
+.nexus-stage { position: relative; z-index: 2; flex: 1 1 auto; min-height: 0; }
+.nexus-frame { display: block; width: 100%; height: 100%; border: 0; background: #050102; }
+.nexus-loading {
+  position: absolute; inset: 0; z-index: 3; pointer-events: none;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  background: radial-gradient(70% 60% at 50% 45%, rgba(40,2,6,0.5), #050102 80%);
+}
+
+/* ── Keyframes ─────────────────────────────────────────────────────────── */
+@keyframes qmsg-fade  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes qmsg-rise  { from { opacity: 0; transform: translateY(18px) scale(0.97); } to { opacity: 1; transform: none; } }
+@keyframes qmsg-scan  { 0% { top: -28%; } 100% { top: 110%; } }
+@keyframes qmsg-blink { 50% { opacity: 0; } }
+@keyframes qmsg-breathe { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+@keyframes qmsg-seal-pulse { 0%, 100% { box-shadow: 0 0 14px rgba(225,29,42,0.45), 0 0 0 1px rgba(0,0,0,0.4) inset; } 50% { box-shadow: 0 0 26px rgba(225,29,42,0.7), 0 0 0 1px rgba(0,0,0,0.4) inset; } }
+@keyframes qmsg-grain { 0% { transform: translate(0,0); } 100% { transform: translate(6%, 4%); } }
+@keyframes qmsg-grid  { from { background-position: 0 0; } to { background-position: 46px 46px; } }
+@keyframes qmsg-dots  { 0% { content: ""; } 25% { content: "."; } 50% { content: ".."; } 75% { content: "..."; } }
+
+/* Narrow stacking lives on the --narrow classes above (wired via matchMedia
+   in QueenMessengerWindow.tsx) — no duplicate @media block. */
+/* Short landscape: keep the decree readable when vertical space is tight. */
+@media (max-height: 560px) {
+  .qmsg-panel { padding: 14px 18px; }
+  .qmsg-title { font-size: clamp(1rem, 5vmin, 1.5rem); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qmsg-overlay, .qmsg-panel, .qmsg-panel::after, .qmsg-portrait::before,
+  .qmsg-seal, .nexus-sigil, .nexus-screen::before { animation: none !important; }
+}
+
+/* ============================================================
+   Code belongs ABOVE this comment. 500-line guard.
+   ============================================================ */

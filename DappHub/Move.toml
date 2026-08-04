@@ -1,0 +1,14 @@
+[package]
+name = "dapp_hub"
+edition = "2024.beta"
+version = "1.0.0"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+EVE = { local = "../EveCoinTypeStub" }
+WorldStub = { local = "../WorldStub" }
+
+[addresses]
+dapp_hub = "0x931f71c0c8f839b692b2cf8b6512e505ad07c133679d85b1d2741e8e636bc63a"
+EVE = "0xac361aa5ceb726bd974f885c9dea9e55dc9bc98fa1f5731c5965a810707bf0b8"
+world = "0x8b8a46ed766fa1358ce7c5c51f6a164b13d627a63e45343f69ed0ba0446c1aa1"

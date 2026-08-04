@@ -1,0 +1,12 @@
+[package]
+name = "shared_widgets"
+edition = "2024.beta"
+version = "1.0.0"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "framework/testnet" }
+EVE = { local = "../EveCoinTypeStub" }
+
+[addresses]
+shared_widgets = "0xadcf3f71ffd909b55aeb40d9ee7b88c2cfd7db9d8e1304a008fa9274c2d19114"
+EVE = "0xac361aa5ceb726bd974f885c9dea9e55dc9bc98fa1f5731c5965a810707bf0b8"

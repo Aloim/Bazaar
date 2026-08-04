@@ -1,0 +1,167 @@
+/* ============================================================
+   If this file reaches more than 500 lines, split it into
+   2 or more files to prevent bloating. Code belongs BELOW.
+   ============================================================ */
+
+/* ── Dual-currency selector (CreateShopModal) ─────────────────────────────── */
+.currency-selector {
+  display: flex; flex-direction: column; gap: 0.35rem;
+  padding: 0.6rem 0.75rem; background: var(--surface2);
+  border: 1px solid rgba(204, 112, 0, 0.25); border-radius: 4px; margin-bottom: 0.35rem;
+}
+.currency-selector__label  { font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.currency-selector__checks { display: flex; gap: 1.25rem; }
+
+.currency-check { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; font-size: 0.85rem; user-select: none; }
+.currency-check input[type="checkbox"] { accent-color: var(--accent); width: 14px; height: 14px; cursor: pointer; }
+.currency-check:hover span { color: var(--accent); }
+
+.currency-selector__warning {
+  font-size: 0.78rem; color: var(--danger);
+  padding: 0.3rem 0.5rem; background: rgba(204, 34, 0, 0.08);
+  border: 1px solid rgba(204, 34, 0, 0.35); border-radius: 3px;
+}
+
+/* ── Currency select dropdown (ShopView WTS row) ─────────────────────────── */
+.currency-select {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 3px;
+  color: var(--text); font-family: var(--font); font-size: 0.82rem;
+  padding: 0.25rem 0.4rem; cursor: pointer; width: auto; min-width: 80px;
+}
+.currency-select:focus { outline: none; border-color: var(--accent-hover); box-shadow: 0 0 0 2px rgba(204, 112, 0, 0.25); }
+.currency-select option { background: var(--surface); color: var(--text); }
+
+/* ── InventoryPage ────────────────────────────────────────────────────────── */
+.inventory-page { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+.inventory-page__body {
+  display: flex; flex-direction: column; gap: 0.75rem;
+  padding: 1.25rem 1.5rem; overflow-y: auto; flex: 1;
+}
+
+/* ── Volume bar ───────────────────────────────────────────────────────────── */
+.volume-bar-section { display: flex; flex-direction: column; gap: 0.3rem; }
+
+.volume-bar {
+  width: 100%; height: 8px; background: var(--surface2);
+  border: 1px solid rgba(204, 112, 0, 0.25); border-radius: 4px; overflow: hidden;
+}
+.volume-bar__fill {
+  height: 100%; background: var(--accent); border-radius: 4px;
+  transition: width 0.4s ease; box-shadow: var(--glow-sm);
+}
+.volume-bar__label  { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.78rem; color: var(--muted); }
+.volume-bar__pct    { color: var(--accent2); font-size: 0.72rem; }
+
+/* ── Inventory stats summary row ─────────────────────────────────────────── */
+.inventory-stats-row { font-size: 0.8rem; color: var(--muted); padding: 0.1rem 0; }
+
+/* ── Search + sort controls row ──────────────────────────────────────────── */
+.inventory-controls { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.inventory-search   { flex: 1; min-width: 160px; }
+.inventory-sort     { display: flex; align-items: center; gap: 0.25rem; flex-shrink: 0; }
+.inventory-sort__btn--active { color: var(--accent); }
+
+/* ── Inventory data grid (table wrapper) ─────────────────────────────────── */
+.inventory-grid { width: 100%; overflow-x: auto; }
+.inventory-grid__th--sortable { cursor: pointer; user-select: none; transition: color 0.15s; }
+.inventory-grid__th--sortable:hover { color: var(--accent-hover); }
+
+/* ── Inventory row state modifiers ───────────────────────────────────────── */
+.inventory-row--locked td { background: rgba(204, 112, 0, 0.04); }
+
+/* ── Lock badge ───────────────────────────────────────────────────────────── */
+.lock-badge {
+  display: inline-block; background: rgba(204, 112, 0, 0.18);
+  border: 1px solid var(--accent); border-radius: 3px;
+  padding: 1px 7px; font-size: 0.72rem; color: var(--accent2); letter-spacing: 0.03em; cursor: help;
+}
+
+@media (max-width: 800px) {
+  .inventory-page__body { padding: 0.9rem 0.75rem; }
+  .inventory-controls { flex-direction: column; align-items: stretch; }
+  .inventory-sort { justify-content: flex-start; }
+}
+
+/* ── Context menu (right-click popup) ────────────────────────────────────── */
+.context-menu {
+  position: fixed; z-index: var(--z-popout, 980); min-width: 160px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 4px; box-shadow: var(--glow-sm), var(--shadow); padding: 4px 0;
+  display: flex; flex-direction: column;
+}
+.context-menu__item {
+  background: none; border: none; color: var(--text); font-family: var(--font);
+  font-size: 0.85rem; text-align: left; padding: 0.45rem 1rem;
+  cursor: pointer; letter-spacing: 0.02em; transition: background 0.12s, color 0.12s;
+}
+.context-menu__item:hover:not(:disabled) { background: rgba(204, 112, 0, 0.14); color: var(--accent2); }
+.context-menu__item--disabled, .context-menu__item:disabled { color: var(--muted); cursor: not-allowed; opacity: 0.5; }
+
+/* ── Game HUD Overlay ── */
+.game-hud {
+  position: absolute; z-index: var(--z-hud, 5); pointer-events: none; font-family: var(--font-display);
+}
+.game-hud--balance {
+  top: 52px; right: 12px;
+  background: rgba(0, 0, 0, 0.7); border: 1px solid rgba(204, 112, 0, 0.4);
+  border-radius: 6px; padding: 8px 14px; zoom: var(--ui-scale);
+}
+.game-hud__row   { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; line-height: 1.6; }
+.game-hud__label { color: rgba(204, 112, 0, 0.8); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+.game-hud__value { color: #e0e0e0; font-weight: bold; }
+
+.game-hud--controls {
+  bottom: 12px; left: 12px;
+  background: rgba(0, 0, 0, 0.6); border-radius: 6px; padding: 6px 12px;
+  display: flex; gap: 16px; font-size: 11px; color: rgba(204, 112, 0, 0.7);
+  align-items: center; pointer-events: auto; zoom: var(--ui-scale);
+}
+/* The one control that matters most — make "C create stall" read as the primary
+   action: full-strength accent, bold, a thin pill so the eye lands on it first. */
+.game-hud--controls .game-hud__key--important {
+  color: #ffb454; font-weight: 700;
+  padding: 1px 8px; border-radius: 999px;
+  border: 1px solid rgba(204, 112, 0, 0.6); background: rgba(204, 112, 0, 0.14);
+  text-shadow: 0 0 8px rgba(204, 112, 0, 0.45);
+}
+.game-hud__scale       { display: flex; align-items: center; gap: 3px; }
+.game-hud__scale-btn   {
+  background: rgba(0, 0, 0, 0.6); color: rgba(204, 112, 0, 0.6);
+  border: 1px solid rgba(204, 112, 0, 0.25); border-radius: 3px;
+  font-family: inherit; font-size: inherit; cursor: pointer; padding: 1px 4px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.game-hud__scale-btn:hover { color: rgba(204, 112, 0, 0.9); border-color: rgba(204, 112, 0, 0.5); }
+.game-hud__scale-btn.active { color: #fff; border-color: var(--accent); background: rgba(204, 112, 0, 0.2); }
+
+/* Wrap the nav row (flex-wrap + viewport-bounded max-width) so it never overflows
+   the left edge of EVE Frontier's narrow/portrait CEF viewport — previously the
+   leftmost item ("New? Help" + its dropdown) was pushed out of frame. Right-anchored,
+   so wrapped rows stay top-right and in-frame. */
+.game-hud--nav { top: 12px; right: 12px; display: flex; flex-wrap: wrap; justify-content: flex-end; max-width: calc(100vw - 24px); gap: 6px; pointer-events: auto; zoom: var(--ui-scale); }
+
+.game-overlay-panel {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  z-index: 10; width: min(600px, 92%); max-height: 80vh; overflow-y: auto;
+  background: #0a0a0a; border: 1px solid rgba(204, 112, 0, 0.5);
+  border-radius: 10px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+}
+
+.floating-panel {
+  background: rgba(15, 12, 8, 0.92); border: 1px solid rgba(204, 112, 0, 0.4);
+  border-radius: 8px; padding: 16px; box-shadow: 0 0 24px rgba(204, 112, 0, 0.15);
+  font-family: var(--font); color: var(--text);
+}
+
+.game-proximity-warning {
+  position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%);
+  z-index: 20; background: rgba(180, 40, 0, 0.9); color: #fff;
+  padding: 10px 20px; border-radius: 6px; font-size: 0.85rem; font-weight: 600;
+  pointer-events: none; white-space: nowrap; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================
+   Code belongs ABOVE this comment. If this file reaches more
+   than 500 lines, split it into 2 or more files.
+   ============================================================ */

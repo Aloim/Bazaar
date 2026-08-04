@@ -1,0 +1,52 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://textures/fx_glow.png" id="1_glow"]
+
+[sub_resource type="Gradient" id="Gradient_portal"]
+offsets = PackedFloat32Array(0, 0.5, 1)
+colors = PackedColorArray(0.7, 0.9, 1, 1, 0.3, 0.7, 1, 0.8, 0.1, 0.4, 0.8, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTex_portal"]
+gradient = SubResource("Gradient_portal")
+width = 1
+
+[sub_resource type="Curve" id="Curve_scale_portal"]
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.4, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="GDScript" id="GDScript_pulse"]
+script/source = "extends PointLight2D
+
+var _time: float = 0.0
+var _base_energy: float = 1.2
+
+func _process(delta: float) -> void:
+	_time += delta
+	energy = _base_energy + sin(_time * 2.0) * 0.3
+"
+
+[node name="PortalGlow" type="Node2D"]
+
+[node name="Motes" type="CPUParticles2D" parent="."]
+amount = 25
+lifetime = 2.0
+speed_scale = 1.0
+texture = ExtResource("1_glow")
+emission_shape = 1
+emission_sphere_radius = 40.0
+direction = Vector2(0, -1)
+spread = 180.0
+gravity = Vector2(0, -20)
+initial_velocity_min = 5.0
+initial_velocity_max = 30.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+scale_amount_curve = SubResource("Curve_scale_portal")
+color_ramp = SubResource("GradientTex_portal")
+
+[node name="Light" type="PointLight2D" parent="."]
+color = Color(0.4, 0.75, 1, 1)
+energy = 1.2
+texture = ExtResource("1_glow")
+texture_scale = 6.0
+script = SubResource("GDScript_pulse")

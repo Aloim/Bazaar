@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=3 uid="uid://hud001"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_hud"]
+
+[node name="HUD" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_hud")
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+mouse_filter = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BalanceLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "-- TRIBE"
+
+[node name="AddressLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Not connected"
+
+[node name="RoleBadge" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = ""
+
+[node name="Spacer" type="Control" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BtnPlaceShop" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Place Shop"
+
+[node name="BtnTrade" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Trade"
+
+[node name="BtnInventory" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="BtnAdmin" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+visible = false
+text = "Admin"
+
+[node name="BtnMod" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+visible = false
+text = "Mod"
+
+[node name="ToastContainer" type="VBoxContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -200.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="BannedOverlay" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+color = Color(0, 0, 0, 0.85)
+mouse_filter = 1
+
+[node name="BannedLabel" type="Label" parent="BannedOverlay"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "You have been banned."

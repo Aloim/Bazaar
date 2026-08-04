@@ -1,0 +1,48 @@
+# Build artifacts
+node_modules/
+dist/
+build/
+target/
+netlify-deploy/
+.netlify/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Executables
+*.exe
+
+# Sui Move build
+**/build/
+
+# Claude Code runtime state
+.claude/scheduled_tasks.lock
+
+# Overhaul R1 backup (local safety net)
+_PreRefactorBackup/
+
+# Auto-memory (private)
+
+# Deploy/build scratch artifacts (logs, cascade PTB state, temp files)
+*.log
+*.tmp
+.cascade_*.json
+
+# Netlify deploy helper — contains a personal access token, NEVER commit
+deploy-netlify.sh
+
+# Scratch/debug artifacts accidentally committed pre-migration
+gas_coins.txt
+r1_backup.sh

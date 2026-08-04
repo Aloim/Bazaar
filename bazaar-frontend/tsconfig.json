@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "noFallthroughCasesInSwitch": true
+  },
+  "references": [
+    { "path": "./packages/shared" },
+    { "path": "./apps/dapphub" },
+    { "path": "./apps/notribe" },
+    { "path": "./apps/easy" },
+    { "path": "./apps/advanced" }
+  ],
+  "include": [
+    "test-setup.ts",
+    "vitest.config.ts",
+    "packages/**/*.test.ts",
+    "packages/**/*.test.tsx",
+    "packages/**/__fixtures__/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
+}

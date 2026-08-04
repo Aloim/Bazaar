@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://shaders/tribal_glow.gdshader" id="1_glow"]
+
+[resource]
+shader = ExtResource("1_glow")
+shader_parameter/glow_color = Color(1, 0.16, 0.1, 1)
+shader_parameter/glow_strength = 2.8
+shader_parameter/halo_size = 2.8
+shader_parameter/halo_strength = 1.9
+shader_parameter/pulse_speed = 3.0
+shader_parameter/pulse_depth = 0.32
+shader_parameter/threshold = 0.16

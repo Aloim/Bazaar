@@ -1,0 +1,37 @@
+{
+  "name": "bazaar-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Bazaar Infrastructure frontend monorepo — 4 apps, 2 shared packages",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:dapphub": "npm run dev --workspace=apps/dapphub",
+    "dev:notribe": "npm run dev --workspace=apps/notribe",
+    "dev:easy": "npm run dev --workspace=apps/easy",
+    "dev:advanced": "npm run dev --workspace=apps/advanced",
+    "build:dapphub": "npm run build --workspace=apps/dapphub",
+    "build:notribe": "npm run build --workspace=apps/notribe",
+    "build:easy": "npm run build --workspace=apps/easy",
+    "build:advanced": "npm run build --workspace=apps/advanced",
+    "build:all": "npm run build --workspaces --if-present",
+    "typecheck": "tsc --build",
+    "clean": "rm -rf apps/*/dist packages/*/dist",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "vitest": "~2.1.9",
+    "@vitest/coverage-v8": "~2.1.9",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/user-event": "^14.5.2",
+    "jsdom": "^25.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

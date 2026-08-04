@@ -1,0 +1,486 @@
+[gd_scene format=3 uid="uid://world001"]
+
+[ext_resource type="Texture2D" uid="uid://cjord5dhovjxf" path="res://textures/BazaarMapBackground.webp" id="1_ground"]
+[ext_resource type="PackedScene" uid="uid://player001" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="PackedScene" uid="uid://hud001" path="res://scenes/hud.tscn" id="2_hud"]
+[ext_resource type="Texture2D" uid="uid://b77kllyvkdb4v" path="res://textures/BazaarWalkMask.webp" id="2_walkmask"]
+[ext_resource type="Script" uid="uid://bisr0blrq40hv" path="res://scripts/shop_manager.gd" id="3_shopmanager"]
+[ext_resource type="Script" uid="uid://blt833i0ica2c" path="res://scripts/remote_player_manager.gd" id="4_remoteplayermanager"]
+[ext_resource type="PackedScene" uid="uid://shopnode001" path="res://scenes/shop_node.tscn" id="5_shopscene"]
+[ext_resource type="PackedScene" uid="uid://lvvofdg2t7vg" path="res://scenes/remote_player.tscn" id="6_remoteplayerscene"]
+[ext_resource type="Script" uid="uid://d1vkudqxs7q1k" path="res://scripts/walk_mask.gd" id="7_walkmask"]
+[ext_resource type="Texture2D" uid="uid://vbcvy6ey8eyx" path="res://addons/kenney_particle_pack/smoke_04.png" id="9_e3hyu"]
+[ext_resource type="Texture2D" uid="uid://ctjtyv5pbnh27" path="res://addons/kenney_particle_pack/smoke_03.png" id="10_jhx03"]
+[ext_resource type="PackedScene" uid="uid://c3nvsinwx7uge" path="res://scenes/fx_fire_sparks.tscn" id="10_q5onr"]
+[ext_resource type="Texture2D" uid="uid://ru0xo3bekxd5" path="res://addons/kenney_particle_pack/spark_02.png" id="12_jhx03"]
+[ext_resource type="Texture2D" uid="uid://co3djs5o4twwj" path="res://addons/kenney_particle_pack/flare_01.png" id="13_o8fc1"]
+[ext_resource type="Script" uid="uid://wmrowgksq3h7" path="res://scripts/flicker_broken.gd" id="14_dss4m"]
+[ext_resource type="Script" uid="uid://cfxl8r6edxub3" path="res://scripts/flicker_light.gd" id="14_xo05s"]
+[ext_resource type="Shader" uid="uid://dp3ykt57k2bso" path="res://shaders/ground_fade.gdshader" id="15_gfade"]
+[ext_resource type="Script" uid="uid://dtkxryjycpjpk" path="res://scripts/beacon_config.gd" id="16_beacon"]
+[ext_resource type="Texture2D" uid="uid://dk51uvj8rl5w8" path="res://textures/BazaarForegroundLayer.webp" id="20_fg"]
+[ext_resource type="Script" uid="uid://cl0dpkyi5wehy" path="res://scripts/foreground_occlusion.gd" id="21_fgocc"]
+[ext_resource type="Script" uid="uid://capkajbkqfqe3" path="res://scripts/guestbook_light.gd" id="22_gblight"]
+[ext_resource type="SpriteFrames" uid="uid://ccc0ishx04k23" path="res://sprite/npc/courier.tres" id="23_courier"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gfade"]
+shader = ExtResource("15_gfade")
+shader_parameter/fade_width = 300.0
+
+[node name="World" type="Node2D" unique_id=624563707]
+
+[node name="Ground" type="Sprite2D" parent="." unique_id=1563112068]
+z_index = -10
+material = SubResource("ShaderMaterial_gfade")
+texture = ExtResource("1_ground")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="WalkMask" type="Node2D" parent="." unique_id=1331400457]
+visible = false
+script = ExtResource("7_walkmask")
+walk_mask_texture = ExtResource("2_walkmask")
+
+[node name="MaskOverlay" type="Sprite2D" parent="." unique_id=1506488508]
+visible = false
+modulate = Color(1, 1, 1, 0.35)
+texture = ExtResource("2_walkmask")
+centered = false
+
+[node name="Entities" type="Node2D" parent="." unique_id=1749564535]
+y_sort_enabled = true
+
+[node name="ShopManager" type="Node" parent="Entities" unique_id=1559181335 groups=["shop_manager"]]
+script = ExtResource("3_shopmanager")
+shop_scene = ExtResource("5_shopscene")
+
+[node name="RemotePlayerManager" type="Node" parent="Entities" unique_id=2108598867]
+script = ExtResource("4_remoteplayermanager")
+remote_player_scene = ExtResource("6_remoteplayerscene")
+
+[node name="Smoke1" type="CPUParticles2D" parent="Entities" unique_id=1225034599]
+position = Vector2(738, 1892)
+amount = 7
+texture = ExtResource("9_e3hyu")
+lifetime = 1.94
+preprocess = 1.27
+speed_scale = 0.24
+randomness = 0.47
+lifetime_randomness = 0.12
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector2(0, -500)
+color = Color(0.409283, 0.409283, 0.409283, 0.2509804)
+metadata/_edit_lock_ = true
+
+[node name="Smoke2" type="CPUParticles2D" parent="Entities" unique_id=2088537992]
+position = Vector2(570, 841)
+amount = 7
+texture = ExtResource("9_e3hyu")
+lifetime = 1.94
+preprocess = 1.27
+speed_scale = 0.24
+randomness = 0.47
+lifetime_randomness = 0.12
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 137.14
+gravity = Vector2(0, -500)
+color = Color(0.4607186, 0.4607186, 0.4607186, 0.10980392)
+metadata/_edit_lock_ = true
+
+[node name="Smoke3" type="CPUParticles2D" parent="Entities" unique_id=21041720]
+position = Vector2(791, 1918)
+amount = 7
+texture = ExtResource("10_jhx03")
+lifetime = 1.94
+preprocess = 1.27
+speed_scale = 0.24
+randomness = 0.47
+lifetime_randomness = 0.12
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 137.14
+gravity = Vector2(0, -500)
+color = Color(0.4607186, 0.4607186, 0.4607186, 0.10980392)
+metadata/_edit_lock_ = true
+
+[node name="SmokeSparks1" type="CPUParticles2D" parent="Entities" unique_id=1531626590]
+position = Vector2(655, 538)
+amount = 7
+texture = ExtResource("10_jhx03")
+lifetime = 1.94
+preprocess = 1.27
+speed_scale = 0.24
+randomness = 0.47
+lifetime_randomness = 0.12
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 137.14
+gravity = Vector2(0, -500)
+color = Color(0.4607186, 0.4607186, 0.4607186, 0.10980392)
+metadata/_edit_lock_ = true
+
+[node name="SmokeSparks2" type="CPUParticles2D" parent="Entities" unique_id=1077484557]
+position = Vector2(2017, 322)
+amount = 7
+texture = ExtResource("10_jhx03")
+lifetime = 1.94
+preprocess = 1.27
+speed_scale = 0.24
+randomness = 0.47
+lifetime_randomness = 0.12
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 137.14
+gravity = Vector2(0, -500)
+color = Color(0.4607186, 0.4607186, 0.4607186, 0.10980392)
+metadata/_edit_lock_ = true
+
+[node name="SmokeSparks3" type="CPUParticles2D" parent="Entities" unique_id=1241622276]
+position = Vector2(3723, 739)
+amount = 7
+texture = ExtResource("10_jhx03")
+lifetime = 1.94
+preprocess = 1.27
+speed_scale = 0.24
+randomness = 0.47
+lifetime_randomness = 0.12
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 137.14
+gravity = Vector2(0, -500)
+color = Color(0.4607186, 0.4607186, 0.4607186, 0.10980392)
+metadata/_edit_lock_ = true
+
+[node name="Shoplight5" type="PointLight2D" parent="Entities" unique_id=95639259]
+position = Vector2(2384, 1369)
+scale = Vector2(0.90919566, 1)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 1.08
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.05
+script = ExtResource("14_dss4m")
+metadata/_edit_lock_ = true
+
+[node name="AnouncementSpark" parent="Entities" unique_id=2078542411 instance=ExtResource("10_q5onr")]
+position = Vector2(2409, 1350)
+scale = Vector2(4, 4)
+metadata/_edit_lock_ = true
+
+[node name="Sparks1" type="CPUParticles2D" parent="Entities" unique_id=1574098002]
+position = Vector2(657, 547)
+rotation = 0.74348176
+amount = 5
+texture = ExtResource("12_jhx03")
+lifetime = 0.3
+preprocess = 0.65
+speed_scale = 0.2
+explosiveness = 0.75
+randomness = 1.0
+use_fixed_seed = true
+seed = 153828389
+lifetime_randomness = 0.12
+direction = Vector2(50, 0)
+spread = 177.86
+gravity = Vector2(0, 500)
+initial_velocity_min = 87.3
+initial_velocity_max = 246.03
+angular_velocity_min = 40.0
+angular_velocity_max = 251.43
+linear_accel_min = 64.29
+linear_accel_max = 64.29
+tangential_accel_min = 0.79
+tangential_accel_max = 70.63
+angle_min = 137.2
+angle_max = 257.1
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(1, 0.7607843, 0.49411765, 1)
+anim_speed_max = 14.73
+anim_offset_min = 0.7262
+anim_offset_max = 0.7262
+metadata/_edit_lock_ = true
+
+[node name="Sparks2" type="CPUParticles2D" parent="Entities" unique_id=2017643007]
+position = Vector2(2013.9999, 299)
+rotation = 0.74348176
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("12_jhx03")
+lifetime = 0.58
+preprocess = 1.11
+speed_scale = 0.3
+explosiveness = 0.75
+randomness = 0.96
+direction = Vector2(50, 0)
+spread = 177.86
+gravity = Vector2(0, 700)
+initial_velocity_min = 87.3
+initial_velocity_max = 246.03
+angular_velocity_min = 40.0
+angular_velocity_max = 251.43
+linear_accel_min = 64.29
+linear_accel_max = 64.29
+tangential_accel_min = 0.79
+tangential_accel_max = 70.63
+damping_min = 2.778
+damping_max = 7.54
+angle_min = 137.2
+angle_max = 257.1
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+color = Color(1, 0.7607843, 0.49411765, 1)
+anim_speed_max = 14.73
+anim_offset_min = 0.7262
+anim_offset_max = 0.7262
+metadata/_edit_lock_ = true
+
+[node name="Shoplight1" type="PointLight2D" parent="Entities" unique_id=536567647]
+position = Vector2(3859, 1575)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 1.5
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.8
+metadata/_edit_lock_ = true
+
+[node name="Shoplight15" type="PointLight2D" parent="Entities" unique_id=733207743]
+position = Vector2(2404, 1331)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 5.94
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.8
+metadata/_edit_lock_ = true
+
+[node name="Shoplight16" type="PointLight2D" parent="Entities" unique_id=251831334]
+position = Vector2(2145, 868)
+color = Color(1, 0.8392157, 0.6431373, 1)
+energy = 2.68
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.94
+metadata/_edit_lock_ = true
+
+[node name="Shoplight17" type="PointLight2D" parent="Entities" unique_id=1456662611]
+position = Vector2(1565, 2211)
+color = Color(1, 0.827451, 0.44313726, 1)
+energy = 5.94
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.8
+metadata/_edit_lock_ = true
+
+[node name="Shoplight18" type="PointLight2D" parent="Entities" unique_id=406416164]
+position = Vector2(2801, 2164)
+color = Color(0.8784314, 0.5647059, 0.45882353, 1)
+energy = 5.94
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.8
+metadata/_edit_lock_ = true
+
+[node name="Shoplight14" type="PointLight2D" parent="Entities" unique_id=314945076]
+position = Vector2(1436, 1086)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 2.28
+texture = ExtResource("13_o8fc1")
+texture_scale = 2.49
+script = ExtResource("14_xo05s")
+flicker_intensity = 0.6
+flicker_speed = 14.0
+metadata/_edit_lock_ = true
+
+[node name="Shoplight12" type="PointLight2D" parent="Entities" unique_id=892631100]
+position = Vector2(2820, 405)
+color = Color(0.94133586, 1.6095817, 1.411583, 1)
+energy = 1.88
+texture = ExtResource("13_o8fc1")
+texture_scale = 11.14
+script = ExtResource("22_gblight")
+base_energy = 3.0
+pulse_amplitude = 1.0
+hover_energy = 0.7
+metadata/_edit_lock_ = true
+
+[node name="Shoplight13" type="PointLight2D" parent="Entities" unique_id=961188736]
+position = Vector2(2809, 390)
+color = Color(0.94133586, 1.6095817, 1.411583, 1)
+energy = 1.56
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.99
+metadata/_edit_lock_ = true
+
+[node name="Shoplight9" type="PointLight2D" parent="Entities" unique_id=1293164437]
+position = Vector2(3205, 472)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 1.5
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.8
+script = ExtResource("14_xo05s")
+flicker_speed = 12.0
+metadata/_edit_lock_ = true
+
+[node name="Shoplight10" type="PointLight2D" parent="Entities" unique_id=682720258]
+position = Vector2(3390, 628)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 1.5
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.8
+script = ExtResource("14_dss4m")
+metadata/_edit_lock_ = true
+
+[node name="Shoplight11" type="PointLight2D" parent="Entities" unique_id=1304843913]
+position = Vector2(3136, 611)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 1.5
+texture = ExtResource("13_o8fc1")
+texture_scale = 3.8
+metadata/_edit_lock_ = true
+
+[node name="Shoplight8" type="PointLight2D" parent="Entities" unique_id=1878997681]
+position = Vector2(3766, 942)
+color = Color(1, 0.70980394, 0.34901962, 0.7058824)
+energy = 1.71
+texture = ExtResource("13_o8fc1")
+texture_scale = 2.66
+metadata/_edit_lock_ = true
+
+[node name="Shoplight7" type="PointLight2D" parent="Entities" unique_id=720158249]
+position = Vector2(3687, 737)
+color = Color(0.35421214, 0.6401996, 0.9692773, 1)
+energy = 2.16
+texture = ExtResource("13_o8fc1")
+texture_scale = 12.57
+script = ExtResource("14_dss4m")
+metadata/_edit_lock_ = true
+
+[node name="Shoplight6" type="PointLight2D" parent="Entities" unique_id=1901242381]
+position = Vector2(542, 1994)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 1.91
+texture = ExtResource("13_o8fc1")
+texture_scale = 5.41
+metadata/_edit_lock_ = true
+
+[node name="Shoplight2" type="PointLight2D" parent="Entities" unique_id=1198172016]
+position = Vector2(835, 709)
+color = Color(1, 0.4117647, 0.34901962, 1)
+energy = 1.5
+texture = ExtResource("13_o8fc1")
+texture_scale = 2.31
+script = ExtResource("14_xo05s")
+flicker_intensity = 0.4
+flicker_speed = 13.0
+metadata/_edit_lock_ = true
+
+[node name="Shoplight3" type="PointLight2D" parent="Entities" unique_id=1495296324]
+position = Vector2(2671, 830)
+color = Color(0.38039216, 0.60784316, 0.78039217, 1)
+energy = 1.08
+texture = ExtResource("13_o8fc1")
+texture_scale = 1.93
+script = ExtResource("14_dss4m")
+metadata/_edit_lock_ = true
+
+[node name="Shoplight4" type="PointLight2D" parent="Entities" unique_id=641406288]
+position = Vector2(1638, 991)
+color = Color(0.5254902, 0.8, 1, 1)
+energy = 1.08
+texture = ExtResource("13_o8fc1")
+texture_scale = 2.31
+metadata/_edit_lock_ = true
+
+[node name="AnnouncementBeacon" type="Node2D" parent="Entities" unique_id=1888234567 groups=["announcement_beacon"]]
+position = Vector2(2400, 1344)
+script = ExtResource("16_beacon")
+beacon_scale = 1.2
+metadata/_edit_lock_ = true
+
+[node name="ArchiveBeacon" type="Node2D" parent="Entities" unique_id=1978236818 groups=["archive_beacon"]]
+position = Vector2(2410.0002, 1361.0001)
+rotation = 0.17453292
+script = ExtResource("16_beacon")
+beacon_scale = 1.2
+metadata/_edit_lock_ = true
+
+[node name="TradeBeacon" type="Node2D" parent="Entities" unique_id=768995200 groups=["trade_beacon"]]
+position = Vector2(2245, 1649)
+rotation = 0.17453292
+scale = Vector2(0.7, 0.7)
+script = ExtResource("16_beacon")
+beacon_scale = 1.2
+beacon_rotation_deg = 11.900000000000006
+
+[node name="InventoryBeacon" type="Node2D" parent="Entities" unique_id=327916115 groups=["inventory_beacon"]]
+position = Vector2(2618, 1626.0001)
+rotation = 0.17453292
+scale = Vector2(0.7, 0.7)
+script = ExtResource("16_beacon")
+beacon_scale = 1.2
+beacon_rotation_deg = -10.199999999999989
+
+[node name="GuestbookBeacon" type="Node2D" parent="Entities" unique_id=351086621 groups=["guestbook_beacon"]]
+position = Vector2(1889, 1438.9999)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("16_beacon")
+beacon_scale = 0.8
+beacon_rotation_deg = 57.099999999999994
+
+[node name="ExchangeBeacon" type="Node2D" parent="Entities" unique_id=765432198 groups=["exchange_beacon"]]
+position = Vector2(2229, 954)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("16_beacon")
+beacon_scale = 1.2
+beacon_rotation_deg = -12.0
+
+[node name="FinanceNewsBeacon" type="Node2D" parent="Entities" unique_id=112358132 groups=["finance_news_beacon"]]
+position = Vector2(2808, 1561)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("16_beacon")
+beacon_scale = 1.2
+beacon_rotation_deg = -24.0
+proximity_radius = 220.0
+
+[node name="BazaarNewsBeacon" type="Node2D" parent="Entities" unique_id=998877665 groups=["bazaar_news_beacon"]]
+position = Vector2(3693, 732)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("16_beacon")
+beacon_scale = 1.2
+beacon_rotation_deg = 12.0
+proximity_radius = 220.0
+
+[node name="LocalPlayer" parent="Entities" unique_id=1942809619 groups=["player"] instance=ExtResource("1_player")]
+y_sort_enabled = true
+position = Vector2(1582, 305)
+scale = Vector2(6, 6)
+collision_layer = 3
+
+[node name="SkinBeacon" type="Node2D" parent="Entities" unique_id=1093231417]
+position = Vector2(3822.9998, 1077.0001)
+scale = Vector2(0.7, 0.7)
+script = ExtResource("16_beacon")
+beacon_rotation_deg = 20.0
+
+[node name="QueenMessengerBeacon" type="Node2D" parent="Entities" unique_id=1717171717]
+position = Vector2(2910, 725)
+script = ExtResource("16_beacon")
+beacon_color = Color(0.7, 0.07, 0.09, 1)
+proximity_radius = 240.0
+
+[node name="Courier" type="AnimatedSprite2D" parent="Entities/QueenMessengerBeacon" unique_id=1717171718]
+position = Vector2(81, 15)
+scale = Vector2(0.657, 0.657)
+sprite_frames = ExtResource("23_courier")
+animation = &"idle"
+autoplay = "idle"
+centered = false
+offset = Vector2(-94, -320)
+
+[node name="Foreground" type="Node2D" parent="." unique_id=410723538]
+z_index = 10
+script = ExtResource("21_fgocc")
+metadata/_edit_lock_ = true
+
+[node name="ForegroundSprite" type="Sprite2D" parent="Foreground" unique_id=900463650]
+texture = ExtResource("20_fg")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="HUD" parent="." unique_id=1004245203 instance=ExtResource("2_hud")]
+visible = false

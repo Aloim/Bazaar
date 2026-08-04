@@ -1,0 +1,979 @@
+[NOTE] Dependencies on Sui, MoveStdlib, Bridge, DeepBook, and SuiSystem are automatically added, but this feature is disabled for your package because you have explicitly included dependencies on Sui. Consider removing these dependencies from `Move.toml`.
+INCLUDING DEPENDENCY EVE
+INCLUDING DEPENDENCY MoveStdlib
+INCLUDING DEPENDENCY Sui
+INCLUDING DEPENDENCY WorldStub
+INCLUDING DEPENDENCY dapp_hub
+INCLUDING DEPENDENCY shared_widgets
+BUILDING bazaar_core
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+   [0m[36m┌─[0m .\sources\bazar_listings.move:49:36
+   [0m[36m│[0m
+[0m[36m49[0m [0m[36m│[0m         let mut listings = vector::[0m[33mempty[0m<Listing>();
+   [0m[36m│[0m                                    [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+   [0m[36m┌─[0m .\sources\bazar_listings.move:75:33
+   [0m[36m│[0m
+[0m[36m75[0m [0m[36m│[0m         let mut pairs = vector::[0m[33mempty[0m<ExchangePair>();
+   [0m[36m│[0m                                 [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_helpers.move:17:23
+   [0m[36m│[0m
+[0m[36m17[0m [0m[36m│[0m     use std::option::{[0m[33mSelf[0m, Option};
+   [0m[36m│[0m                       [0m[33m^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_helpers.move:17:29
+   [0m[36m│[0m
+[0m[36m17[0m [0m[36m│[0m     use std::option::{Self, [0m[33mOption[0m};
+   [0m[36m│[0m                             [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'Option' for module member 'std::option::Option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_de.move:10:51
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use bazaar_core::bazar::{Self, BazarRegistry, [0m[33mShop[0m};
+   [0m[36m│[0m                                                   [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'Shop'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_de.move:14:42
+   [0m[36m│[0m
+[0m[36m14[0m [0m[36m│[0m     use bazaar_core::bazaar_core_admin::{[0m[33mSelf[0m, BazaarCoreAdmin};
+   [0m[36m│[0m                                          [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'bazaar_core_admin'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\tribe_governance.move:13:23
+   [0m[36m│[0m
+[0m[36m13[0m [0m[36m│[0m     use std::string::{[0m[33mSelf[0m, String};
+   [0m[36m│[0m                       [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'string'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\tribe_governance.move:14:14
+   [0m[36m│[0m
+[0m[36m14[0m [0m[36m│[0m     use std::[0m[33moption[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\tribe_governance.move:26:11
+   [0m[36m│[0m
+[0m[36m26[0m [0m[36m│[0m     const [0m[33mE_URL_TOO_LONG[0m: u64 = 6;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_URL_TOO_LONG' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\tribe_governance.move:28:11
+   [0m[36m│[0m
+[0m[36m28[0m [0m[36m│[0m     const [0m[33mE_MODE_NOT_SUPPORTED_FOR_OP[0m: u64 = 8;  // reserved; used by shop_ops/ledger_shop_ops
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_MODE_NOT_SUPPORTED_FOR_OP' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\tribe_governance.move:29:11
+   [0m[36m│[0m
+[0m[36m29[0m [0m[36m│[0m     const [0m[33mE_URL_EMPTY[0m: u64 = 9;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^[0m [0m[33mThe constant 'E_URL_EMPTY' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\tribe_governance.move:32:11
+   [0m[36m│[0m
+[0m[36m32[0m [0m[36m│[0m     const [0m[33mMAX_GODOT_URL_BYTES[0m: u64 = 256;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'MAX_GODOT_URL_BYTES' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\tribe_governance.move:34:11
+   [0m[36m│[0m
+[0m[36m34[0m [0m[36m│[0m     const [0m[33mGOVERNANCE_MODE_CAPITALISTIC[0m: u8 = 0;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'GOVERNANCE_MODE_CAPITALISTIC' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\tribe_governance.move:40:11
+   [0m[36m│[0m
+[0m[36m40[0m [0m[36m│[0m     const [0m[33mSCOPE_TRIBE[0m: u8 = 1;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^[0m [0m[33mThe constant 'SCOPE_TRIBE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\tribe_governance.move:163:30
+    [0m[36m│[0m
+[0m[36m163[0m [0m[36m│[0m             ssu_ids: vector::[0m[33mempty[0m(),
+    [0m[36m│[0m                              [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+  [0m[36m┌─[0m .\sources\shop_moderation.move:9:14
+  [0m[36m│[0m
+[0m[36m9[0m [0m[36m│[0m     use sui::[0m[33mobject[0m;
+  [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'object' for module 'sui::object'. This alias is provided by default[0m
+  [0m[36m│[0m
+  [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation.move:10:27
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use sui::tx_context::{[0m[33mSelf[0m, TxContext};
+   [0m[36m│[0m                           [0m[33m^^^^[0m [0m[33mUnnecessary alias 'tx_context' for module 'sui::tx_context'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation.move:10:33
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use sui::tx_context::{Self, [0m[33mTxContext[0m};
+   [0m[36m│[0m                                 [0m[33m^^^^^^^^^[0m [0m[33mUnnecessary alias 'TxContext' for module member 'sui::tx_context::TxContext'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation.move:11:14
+   [0m[36m│[0m
+[0m[36m11[0m [0m[36m│[0m     use sui::[0m[33mtransfer[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^^^[0m [0m[33mUnnecessary alias 'transfer' for module 'sui::transfer'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation.move:12:14
+   [0m[36m│[0m
+[0m[36m12[0m [0m[36m│[0m     use sui::[0m[33mcoin[0m;
+   [0m[36m│[0m              [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'coin'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation.move:13:14
+   [0m[36m│[0m
+[0m[36m13[0m [0m[36m│[0m     use std::[0m[33moption[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:16:27
+   [0m[36m│[0m
+[0m[36m16[0m [0m[36m│[0m     use sui::tx_context::{[0m[33mSelf[0m, TxContext};
+   [0m[36m│[0m                           [0m[33m^^^^[0m [0m[33mUnnecessary alias 'tx_context' for module 'sui::tx_context'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:16:33
+   [0m[36m│[0m
+[0m[36m16[0m [0m[36m│[0m     use sui::tx_context::{Self, [0m[33mTxContext[0m};
+   [0m[36m│[0m                                 [0m[33m^^^^^^^^^[0m [0m[33mUnnecessary alias 'TxContext' for module member 'sui::tx_context::TxContext'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:17:14
+   [0m[36m│[0m
+[0m[36m17[0m [0m[36m│[0m     use sui::[0m[33mtransfer[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^^^[0m [0m[33mUnnecessary alias 'transfer' for module 'sui::transfer'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:18:23
+   [0m[36m│[0m
+[0m[36m18[0m [0m[36m│[0m     use sui::object::{[0m[33mSelf[0m, ID};
+   [0m[36m│[0m                       [0m[33m^^^^[0m [0m[33mUnnecessary alias 'object' for module 'sui::object'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:18:29
+   [0m[36m│[0m
+[0m[36m18[0m [0m[36m│[0m     use sui::object::{Self, [0m[33mID[0m};
+   [0m[36m│[0m                             [0m[33m^^[0m [0m[33mUnnecessary alias 'ID' for module member 'sui::object::ID'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:20:23
+   [0m[36m│[0m
+[0m[36m20[0m [0m[36m│[0m     use std::option::{[0m[33mSelf[0m, Option};
+   [0m[36m│[0m                       [0m[33m^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:20:29
+   [0m[36m│[0m
+[0m[36m20[0m [0m[36m│[0m     use std::option::{Self, [0m[33mOption[0m};
+   [0m[36m│[0m                             [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'Option' for module member 'std::option::Option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:24:28
+   [0m[36m│[0m
+[0m[36m24[0m [0m[36m│[0m     use world::inventory::{[0m[33mSelf[0m, Item};
+   [0m[36m│[0m                            [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'inventory'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar_close.move:47:11
+   [0m[36m│[0m
+[0m[36m47[0m [0m[36m│[0m     const [0m[33mE_CANNOT_FORCE_CLOSE_SSU_OWNER_SHOP[0m: u64 = 20;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_CANNOT_FORCE_CLOSE_SSU_OWNER_SHOP' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\membership.move:17:11
+   [0m[36m│[0m
+[0m[36m17[0m [0m[36m│[0m     const [0m[33mE_PLAYER_BANNED[0m:      u64 = 2;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_PLAYER_BANNED' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09014][0m[1m: unused mutable reference '&mut' parameter[0m
+    [0m[36m┌─[0m .\sources\membership.move:170:14
+    [0m[36m│[0m
+[0m[36m170[0m [0m[36m│[0m         ctx: [0m[33m&mut TxContext[0m,
+    [0m[36m│[0m         [0m[36m---[0m  [0m[33m^^^^^^^^^^^^^^[0m [0m[33mMutable reference is never used mutably, consider switching to an immutable reference '&' instead[0m
+    [0m[36m│[0m         [0m[36m│[0m     
+    [0m[36m│[0m         [0m[36mFor parameters, this can be silenced by prefixing the name with an underscore, e.g. '_ctx'[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(unused_mut_parameter)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\wtb_escrow_pool.move:14:22
+   [0m[36m│[0m
+[0m[36m14[0m [0m[36m│[0m     use sui::object::[0m[33mID[0m;
+   [0m[36m│[0m                      [0m[33m^^[0m [0m[33mUnnecessary alias 'ID' for module member 'sui::object::ID'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\wtb_escrow_pool.move:15:23
+   [0m[36m│[0m
+[0m[36m15[0m [0m[36m│[0m     use std::option::{[0m[33mSelf[0m, Option};
+   [0m[36m│[0m                       [0m[33m^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\wtb_escrow_pool.move:15:29
+   [0m[36m│[0m
+[0m[36m15[0m [0m[36m│[0m     use std::option::{Self, [0m[33mOption[0m};
+   [0m[36m│[0m                             [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'Option' for module member 'std::option::Option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+  [0m[36m┌─[0m .\sources\ssu_treasury.move:7:14
+  [0m[36m│[0m
+[0m[36m7[0m [0m[36m│[0m     use sui::[0m[33mbalance[0m;
+  [0m[36m│[0m              [0m[33m^^^^^^^[0m [0m[33mUnused 'use' of alias 'balance'. Consider removing it[0m
+  [0m[36m│[0m
+  [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\ssu_shop_config.move:19:11
+   [0m[36m│[0m
+[0m[36m19[0m [0m[36m│[0m     const [0m[33mE_ZERO_ITEMS_LIMIT[0m: u64 = 42;        // max_items must be > 0 if non-sentinel
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_ZERO_ITEMS_LIMIT' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\quicktrade_vault.move:10:14
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use sui::[0m[33mtransfer[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^^^[0m [0m[33mUnnecessary alias 'transfer' for module 'sui::transfer'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+   [0m[36m┌─[0m .\sources\quicktrade_vault.move:63:61
+   [0m[36m│[0m
+[0m[36m63[0m [0m[36m│[0m             table::add(&mut vault.deposits, player, vector::[0m[33mempty[0m<VaultEntry>());
+   [0m[36m│[0m                                                             [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\quicktrade_vault.move:127:73
+    [0m[36m│[0m
+[0m[36m127[0m [0m[36m│[0m         if (!table::contains(&vault.deposits, player)) { return vector::[0m[33mempty[0m<VaultEntry>() };
+    [0m[36m│[0m                                                                         [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+  [0m[36m┌─[0m .\sources\user_storage.move:8:14
+  [0m[36m│[0m
+[0m[36m8[0m [0m[36m│[0m     use sui::[0m[33mtransfer[0m;
+  [0m[36m│[0m              [0m[33m^^^^^^^^[0m [0m[33mUnnecessary alias 'transfer' for module 'sui::transfer'. This alias is provided by default[0m
+  [0m[36m│[0m
+  [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\user_storage.move:11:23
+   [0m[36m│[0m
+[0m[36m11[0m [0m[36m│[0m     use std::option::{[0m[33mSelf[0m, Option};
+   [0m[36m│[0m                       [0m[33m^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\user_storage.move:11:29
+   [0m[36m│[0m
+[0m[36m11[0m [0m[36m│[0m     use std::option::{Self, [0m[33mOption[0m};
+   [0m[36m│[0m                             [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'Option' for module member 'std::option::Option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\user_storage.move:218:62
+    [0m[36m│[0m
+[0m[36m218[0m [0m[36m│[0m             table::add(&mut storage.deposits, buyer, vector::[0m[33mempty[0m<StoredItem>());
+    [0m[36m│[0m                                                              [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\user_storage.move:397:73
+    [0m[36m│[0m
+[0m[36m397[0m [0m[36m│[0m         if (!table::contains(&storage.deposits, player)) return vector::[0m[33mempty[0m();
+    [0m[36m│[0m                                                                         [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+  [0m[36m┌─[0m .\sources\ssu_governance_caps.move:9:14
+  [0m[36m│[0m
+[0m[36m9[0m [0m[36m│[0m     use sui::[0m[33mtransfer[0m;
+  [0m[36m│[0m              [0m[33m^^^^^^^^[0m [0m[33mUnnecessary alias 'transfer' for module 'sui::transfer'. This alias is provided by default[0m
+  [0m[36m│[0m
+  [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\ssu_governance_caps.move:10:23
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use std::option::{[0m[33mSelf[0m, Option};
+   [0m[36m│[0m                       [0m[33m^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\ssu_governance_caps.move:10:29
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use std::option::{Self, [0m[33mOption[0m};
+   [0m[36m│[0m                             [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'Option' for module member 'std::option::Option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_wts.move:10:51
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use bazaar_core::bazar::{Self, BazarRegistry, [0m[33mShop[0m};
+   [0m[36m│[0m                                                   [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'Shop'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_wts.move:14:42
+   [0m[36m│[0m
+[0m[36m14[0m [0m[36m│[0m     use bazaar_core::bazaar_core_admin::{[0m[33mSelf[0m, BazaarCoreAdmin};
+   [0m[36m│[0m                                          [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'bazaar_core_admin'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\tribe_governance_godot.move:20:14
+   [0m[36m│[0m
+[0m[36m20[0m [0m[36m│[0m     use std::[0m[33moption[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+  [0m[36m┌─[0m .\sources\shop_ops_wtb.move:7:27
+  [0m[36m│[0m
+[0m[36m7[0m [0m[36m│[0m     use sui::coin::{Self, [0m[33mCoin[0m};
+  [0m[36m│[0m                           [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'Coin'. Consider removing it[0m
+  [0m[36m│[0m
+  [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+  [0m[36m┌─[0m .\sources\shop_ops_wtb.move:9:19
+  [0m[36m│[0m
+[0m[36m9[0m [0m[36m│[0m     use EVE::EVE::[0m[33mEVE[0m;
+  [0m[36m│[0m                   [0m[33m^^^[0m [0m[33mUnused 'use' of alias 'EVE'. Consider removing it[0m
+  [0m[36m│[0m
+  [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_wtb.move:10:31
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use world::storage_unit::{[0m[33mSelf[0m, StorageUnit};
+   [0m[36m│[0m                               [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'storage_unit'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_wtb.move:11:28
+   [0m[36m│[0m
+[0m[36m11[0m [0m[36m│[0m     use world::character::{[0m[33mSelf[0m, Character};
+   [0m[36m│[0m                            [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'character'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_wtb.move:12:28
+   [0m[36m│[0m
+[0m[36m12[0m [0m[36m│[0m     use world::inventory::{[0m[33mSelf[0m, Item};
+   [0m[36m│[0m                            [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'inventory'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_wtb.move:18:42
+   [0m[36m│[0m
+[0m[36m18[0m [0m[36m│[0m     use bazaar_core::bazaar_core_admin::{[0m[33mSelf[0m, BazaarCoreAdmin};
+   [0m[36m│[0m                                          [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'bazaar_core_admin'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09002][0m[1m: unused variable[0m
+   [0m[36m┌─[0m .\sources\shop_ops_wtb.move:50:9
+   [0m[36m│[0m
+[0m[36m50[0m [0m[36m│[0m         [0m[33mmember_registry[0m: &MemberRegistry,
+   [0m[36m│[0m         [0m[33m^^^^^^^^^^^^^^^[0m [0m[33mUnused parameter 'member_registry'. Consider removing or prefixing with an underscore: '_member_registry'[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_variable)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\bazar.move:13:23
+   [0m[36m│[0m
+[0m[36m13[0m [0m[36m│[0m     use std::string::{[0m[33mSelf[0m, String};
+   [0m[36m│[0m                       [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'string'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:31:11
+   [0m[36m│[0m
+[0m[36m31[0m [0m[36m│[0m     const [0m[33mTITLE_MAX[0m: u64 = 20;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^[0m [0m[33mThe constant 'TITLE_MAX' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:34:11
+   [0m[36m│[0m
+[0m[36m34[0m [0m[36m│[0m     const [0m[33mE_TITLE_TOO_LONG[0m: u64 = 1;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_TITLE_TOO_LONG' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:35:11
+   [0m[36m│[0m
+[0m[36m35[0m [0m[36m│[0m     const [0m[33mE_EMPTY_LISTINGS[0m: u64 = 2;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_EMPTY_LISTINGS' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:38:11
+   [0m[36m│[0m
+[0m[36m38[0m [0m[36m│[0m     const [0m[33mE_SHOP_NOT_ACTIVE[0m: u64 = 5;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_SHOP_NOT_ACTIVE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:39:11
+   [0m[36m│[0m
+[0m[36m39[0m [0m[36m│[0m     const [0m[33mE_INVALID_BAZAAR_TYPE[0m: u64 = 6;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_INVALID_BAZAAR_TYPE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:40:11
+   [0m[36m│[0m
+[0m[36m40[0m [0m[36m│[0m     const [0m[33mE_LENGTH_MISMATCH[0m: u64 = 7;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_LENGTH_MISMATCH' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:41:11
+   [0m[36m│[0m
+[0m[36m41[0m [0m[36m│[0m     const [0m[33mE_LISTING_NOT_FOUND[0m: u64 = 8;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_LISTING_NOT_FOUND' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:42:11
+   [0m[36m│[0m
+[0m[36m42[0m [0m[36m│[0m     const [0m[33mE_PAIR_NOT_FOUND[0m: u64 = 9;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_PAIR_NOT_FOUND' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:43:11
+   [0m[36m│[0m
+[0m[36m43[0m [0m[36m│[0m     const [0m[33mE_INVALID_SHOP_KIND[0m: u64 = 10;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_INVALID_SHOP_KIND' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazar.move:44:11
+   [0m[36m│[0m
+[0m[36m44[0m [0m[36m│[0m     const [0m[33mE_WRONG_SSU[0m: u64 = 11;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^[0m [0m[33mThe constant 'E_WRONG_SSU' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09009][0m[1m: unused struct field[0m
+   [0m[36m┌─[0m .\sources\bazar.move:96:9
+   [0m[36m│[0m
+[0m[36m96[0m [0m[36m│[0m         [0m[33mshop_id[0m: ID, owner: address, bazaar_type: u8,
+   [0m[36m│[0m         [0m[33m^^^^^^^[0m [0m[33mThe 'shop_id' field of the 'ShopClosedEvent' type is unused[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_field)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09009][0m[1m: unused struct field[0m
+   [0m[36m┌─[0m .\sources\bazar.move:96:22
+   [0m[36m│[0m
+[0m[36m96[0m [0m[36m│[0m         shop_id: ID, [0m[33mowner[0m: address, bazaar_type: u8,
+   [0m[36m│[0m                      [0m[33m^^^^^[0m [0m[33mThe 'owner' field of the 'ShopClosedEvent' type is unused[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_field)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09009][0m[1m: unused struct field[0m
+   [0m[36m┌─[0m .\sources\bazar.move:96:38
+   [0m[36m│[0m
+[0m[36m96[0m [0m[36m│[0m         shop_id: ID, owner: address, [0m[33mbazaar_type[0m: u8,
+   [0m[36m│[0m                                      [0m[33m^^^^^^^^^^^[0m [0m[33mThe 'bazaar_type' field of the 'ShopClosedEvent' type is unused[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_field)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09009][0m[1m: unused struct field[0m
+   [0m[36m┌─[0m .\sources\bazar.move:97:9
+   [0m[36m│[0m
+[0m[36m97[0m [0m[36m│[0m         [0m[33mssu_id[0m: address, tribe_id: u64, timestamp_ms: u64,
+   [0m[36m│[0m         [0m[33m^^^^^^[0m [0m[33mThe 'ssu_id' field of the 'ShopClosedEvent' type is unused[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_field)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09009][0m[1m: unused struct field[0m
+   [0m[36m┌─[0m .\sources\bazar.move:97:26
+   [0m[36m│[0m
+[0m[36m97[0m [0m[36m│[0m         ssu_id: address, [0m[33mtribe_id[0m: u64, timestamp_ms: u64,
+   [0m[36m│[0m                          [0m[33m^^^^^^^^[0m [0m[33mThe 'tribe_id' field of the 'ShopClosedEvent' type is unused[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_field)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09009][0m[1m: unused struct field[0m
+   [0m[36m┌─[0m .\sources\bazar.move:97:41
+   [0m[36m│[0m
+[0m[36m97[0m [0m[36m│[0m         ssu_id: address, tribe_id: u64, [0m[33mtimestamp_ms[0m: u64,
+   [0m[36m│[0m                                         [0m[33m^^^^^^^^^^^^[0m [0m[33mThe 'timestamp_ms' field of the 'ShopClosedEvent' type is unused[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_field)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\bazar.move:175:33
+    [0m[36m│[0m
+[0m[36m175[0m [0m[36m│[0m             let mut v = vector::[0m[33mempty[0m<ID>();
+    [0m[36m│[0m                                 [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\bazar.move:215:28
+    [0m[36m│[0m
+[0m[36m215[0m [0m[36m│[0m             pairs: vector::[0m[33mempty[0m(), escrowed_eve: balance::zero(),
+    [0m[36m│[0m                            [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\bazar.move:249:28
+    [0m[36m│[0m
+[0m[36m249[0m [0m[36m│[0m             pairs: vector::[0m[33mempty[0m(), escrowed_eve: coin::into_balance(prepay),
+    [0m[36m│[0m                            [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\bazar.move:285:31
+    [0m[36m│[0m
+[0m[36m285[0m [0m[36m│[0m             listings: vector::[0m[33mempty[0m(), pairs,
+    [0m[36m│[0m                               [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\bazar.move:314:39
+    [0m[36m│[0m
+[0m[36m314[0m [0m[36m│[0m         let mut zero_prices = vector::[0m[33mempty[0m<u64>();
+    [0m[36m│[0m                                       [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\bazar.move:322:28
+    [0m[36m│[0m
+[0m[36m322[0m [0m[36m│[0m             pairs: vector::[0m[33mempty[0m(), escrowed_eve: balance::zero(),
+    [0m[36m│[0m                            [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\bazar.move:468:128
+    [0m[36m│[0m
+[0m[36m468[0m [0m[36m│[0m         if (table::contains(&registry.shops_by_ssu, ssu_id)) { *table::borrow(&registry.shops_by_ssu, ssu_id) } else { vector::[0m[33mempty[0m<ID>() }
+    [0m[36m│[0m                                                                                                                                [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation_tribe.move:18:14
+   [0m[36m│[0m
+[0m[36m18[0m [0m[36m│[0m     use sui::[0m[33mobject[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'object' for module 'sui::object'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation_tribe.move:19:27
+   [0m[36m│[0m
+[0m[36m19[0m [0m[36m│[0m     use sui::tx_context::{[0m[33mSelf[0m, TxContext};
+   [0m[36m│[0m                           [0m[33m^^^^[0m [0m[33mUnnecessary alias 'tx_context' for module 'sui::tx_context'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation_tribe.move:19:33
+   [0m[36m│[0m
+[0m[36m19[0m [0m[36m│[0m     use sui::tx_context::{Self, [0m[33mTxContext[0m};
+   [0m[36m│[0m                                 [0m[33m^^^^^^^^^[0m [0m[33mUnnecessary alias 'TxContext' for module member 'sui::tx_context::TxContext'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation_tribe.move:20:31
+   [0m[36m│[0m
+[0m[36m20[0m [0m[36m│[0m     use world::storage_unit::{[0m[33mSelf[0m, StorageUnit};
+   [0m[36m│[0m                               [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'storage_unit'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation_tribe.move:21:28
+   [0m[36m│[0m
+[0m[36m21[0m [0m[36m│[0m     use world::character::{[0m[33mSelf[0m, Character};
+   [0m[36m│[0m                            [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'character'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\shop_moderation_tribe.move:25:40
+   [0m[36m│[0m
+[0m[36m25[0m [0m[36m│[0m     use bazaar_core::wtb_escrow_pool::{[0m[33mSelf[0m, WtbEscrowPool};
+   [0m[36m│[0m                                        [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'wtb_escrow_pool'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_moderation_tribe.move:35:11
+   [0m[36m│[0m
+[0m[36m35[0m [0m[36m│[0m     const [0m[33mE_RECIPIENT_NOT_SHOP_OWNER[0m: u64 = 16;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_RECIPIENT_NOT_SHOP_OWNER' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_moderation_tribe.move:36:11
+   [0m[36m│[0m
+[0m[36m36[0m [0m[36m│[0m     const [0m[33mE_CANNOT_FORCE_CLOSE_SSU_OWNER_SHOP[0m: u64 = 20;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_CANNOT_FORCE_CLOSE_SSU_OWNER_SHOP' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+  [0m[36m┌─[0m .\sources\trade.move:7:24
+  [0m[36m│[0m
+[0m[36m7[0m [0m[36m│[0m     use sui::balance::{[0m[33mSelf[0m, Balance};
+  [0m[36m│[0m                        [0m[33m^^^^[0m [0m[33mUnused 'use' of alias 'balance'. Consider removing it[0m
+  [0m[36m│[0m
+  [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\trade.move:12:14
+   [0m[36m│[0m
+[0m[36m12[0m [0m[36m│[0m     use sui::[0m[33mtransfer[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^^^[0m [0m[33mUnnecessary alias 'transfer' for module 'sui::transfer'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W04037][0m[1m: deprecated usage[0m
+    [0m[36m┌─[0m .\sources\trade.move:115:33
+    [0m[36m│[0m
+[0m[36m115[0m [0m[36m│[0m         let mut items = vector::[0m[33mempty[0m<TradeItem>();
+    [0m[36m│[0m                                 [0m[33m^^^^^[0m [0m[33mThe function 'std::vector::empty' is deprecated: Use `vector[]` literal instead[0m
+    [0m[36m│[0m
+    [0m[36m=[0m This warning can be suppressed with '#[allow(deprecated_usage)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+  [0m[36m┌─[0m .\sources\ssu_governance.move:8:14
+  [0m[36m│[0m
+[0m[36m8[0m [0m[36m│[0m     use sui::[0m[33mtransfer[0m;
+  [0m[36m│[0m              [0m[33m^^^^^^^^[0m [0m[33mUnnecessary alias 'transfer' for module 'sui::transfer'. This alias is provided by default[0m
+  [0m[36m│[0m
+  [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09001][0m[1m: unused alias[0m
+   [0m[36m┌─[0m .\sources\ssu_governance.move:13:22
+   [0m[36m│[0m
+[0m[36m13[0m [0m[36m│[0m     use bazaar_core::[0m[33muser_storage[0m;
+   [0m[36m│[0m                      [0m[33m^^^^^^^^^^^^[0m [0m[33mUnused 'use' of alias 'user_storage'. Consider removing it[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_use)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\ssu_governance.move:16:14
+   [0m[36m│[0m
+[0m[36m16[0m [0m[36m│[0m     use std::[0m[33moption[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\ssu_governance.move:21:11
+   [0m[36m│[0m
+[0m[36m21[0m [0m[36m│[0m     const [0m[33mE_INSUFFICIENT_BALANCE[0m: u64 = 3;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_INSUFFICIENT_BALANCE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\ssu_governance.move:34:11
+   [0m[36m│[0m
+[0m[36m34[0m [0m[36m│[0m     const [0m[33mSTAFF_KIND_OWNER[0m:       u8 = 0;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'STAFF_KIND_OWNER' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\ssu_governance.move:35:11
+   [0m[36m│[0m
+[0m[36m35[0m [0m[36m│[0m     const [0m[33mSTAFF_KIND_SUPER_ADMIN[0m: u8 = 1;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'STAFF_KIND_SUPER_ADMIN' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\ssu_governance.move:36:11
+   [0m[36m│[0m
+[0m[36m36[0m [0m[36m│[0m     const [0m[33mSTAFF_KIND_ADMIN[0m:       u8 = 2;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'STAFF_KIND_ADMIN' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\ssu_governance.move:37:11
+   [0m[36m│[0m
+[0m[36m37[0m [0m[36m│[0m     const [0m[33mSTAFF_KIND_MOD[0m:         u8 = 3;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^[0m [0m[33mThe constant 'STAFF_KIND_MOD' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:10:22
+   [0m[36m│[0m
+[0m[36m10[0m [0m[36m│[0m     use sui::object::[0m[33mID[0m;
+   [0m[36m│[0m                      [0m[33m^^[0m [0m[33mUnnecessary alias 'ID' for module member 'sui::object::ID'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:17:11
+   [0m[36m│[0m
+[0m[36m17[0m [0m[36m│[0m     const [0m[33mE_INSUFFICIENT_PAYMENT[0m:      u64 = 1;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_INSUFFICIENT_PAYMENT' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:18:11
+   [0m[36m│[0m
+[0m[36m18[0m [0m[36m│[0m     const [0m[33mE_SHOP_NOT_ACTIVE[0m:            u64 = 2;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_SHOP_NOT_ACTIVE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:19:11
+   [0m[36m│[0m
+[0m[36m19[0m [0m[36m│[0m     const [0m[33mE_LISTING_SOLD_OUT[0m:           u64 = 3;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_LISTING_SOLD_OUT' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:20:11
+   [0m[36m│[0m
+[0m[36m20[0m [0m[36m│[0m     const [0m[33mE_WRONG_BAZAAR_TYPE[0m:          u64 = 4;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_WRONG_BAZAAR_TYPE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:21:11
+   [0m[36m│[0m
+[0m[36m21[0m [0m[36m│[0m     const [0m[33mE_PLAYER_BANNED[0m:              u64 = 5;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_PLAYER_BANNED' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:22:11
+   [0m[36m│[0m
+[0m[36m22[0m [0m[36m│[0m     const [0m[33mE_ZERO_QUANTITY[0m:              u64 = 6;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_ZERO_QUANTITY' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:23:11
+   [0m[36m│[0m
+[0m[36m23[0m [0m[36m│[0m     const [0m[33mE_MODE_NOT_SUPPORTED_FOR_OP[0m:  u64 = 7;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_MODE_NOT_SUPPORTED_FOR_OP' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:25:11
+   [0m[36m│[0m
+[0m[36m25[0m [0m[36m│[0m     const [0m[33mE_TRIBE_STORE_PRIVATE[0m:        u64 = 8;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_TRIBE_STORE_PRIVATE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:26:11
+   [0m[36m│[0m
+[0m[36m26[0m [0m[36m│[0m     const [0m[33mE_WRONG_SSU[0m:                  u64 = 9;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^[0m [0m[33mThe constant 'E_WRONG_SSU' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:29:11
+   [0m[36m│[0m
+[0m[36m29[0m [0m[36m│[0m     const [0m[33mTX_WTS[0m:  u8 = 0;
+   [0m[36m│[0m           [0m[33m^^^^^^[0m [0m[33mThe constant 'TX_WTS' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:30:11
+   [0m[36m│[0m
+[0m[36m30[0m [0m[36m│[0m     const [0m[33mTX_WTB[0m:  u8 = 1;
+   [0m[36m│[0m           [0m[33m^^^^^^[0m [0m[33mThe constant 'TX_WTB' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:31:11
+   [0m[36m│[0m
+[0m[36m31[0m [0m[36m│[0m     const [0m[33mTX_DE[0m:   u8 = 2;
+   [0m[36m│[0m           [0m[33m^^^^^[0m [0m[33mThe constant 'TX_DE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\shop_ops_helpers.move:32:11
+   [0m[36m│[0m
+[0m[36m32[0m [0m[36m│[0m     const [0m[33mTX_FREE[0m: u8 = 3;
+   [0m[36m│[0m           [0m[33m^^^^^^^[0m [0m[33mThe constant 'TX_FREE' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\widget_governance.move:36:14
+   [0m[36m│[0m
+[0m[36m36[0m [0m[36m│[0m     use sui::[0m[33mobject[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'object' for module 'sui::object'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\widget_governance.move:37:14
+   [0m[36m│[0m
+[0m[36m37[0m [0m[36m│[0m     use std::[0m[33moption[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'option' for module 'std::option'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\ssu_bootstrap.move:29:14
+   [0m[36m│[0m
+[0m[36m29[0m [0m[36m│[0m     use sui::[0m[33mtransfer[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^^^[0m [0m[33mUnnecessary alias 'transfer' for module 'sui::transfer'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W02021][0m[1m: duplicate alias[0m
+   [0m[36m┌─[0m .\sources\ssu_bootstrap.move:30:14
+   [0m[36m│[0m
+[0m[36m30[0m [0m[36m│[0m     use sui::[0m[33mobject[0m;
+   [0m[36m│[0m              [0m[33m^^^^^^[0m [0m[33mUnnecessary alias 'object' for module 'sui::object'. This alias is provided by default[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(duplicate_alias)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazaar_core_admin.move:11:11
+   [0m[36m│[0m
+[0m[36m11[0m [0m[36m│[0m     const [0m[33mPACKAGE_VERSION[0m: u64 = 3;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'PACKAGE_VERSION' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+[0m[1m[38;5;11mwarning[W09011][0m[1m: unused constant[0m
+   [0m[36m┌─[0m .\sources\bazaar_core_admin.move:17:11
+   [0m[36m│[0m
+[0m[36m17[0m [0m[36m│[0m     const [0m[33mE_CAP_ALREADY_EXTRACTED[0m: u64 = 4;
+   [0m[36m│[0m           [0m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m [0m[33mThe constant 'E_CAP_ALREADY_EXTRACTED' is never used. Consider removing it.[0m
+   [0m[36m│[0m
+   [0m[36m=[0m This warning can be suppressed with '#[allow(unused_const)]' applied to the 'module' or module member ('const', 'fun', or 'struct')
+
+Error executing transaction 'GfPVm3oEDB76GurcwhLydv9wBUzzg8uPS9j2QNEaEcb1': VMVerificationOrDeserializationError in command 0

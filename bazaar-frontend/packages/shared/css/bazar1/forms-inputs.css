@@ -1,0 +1,106 @@
+/* ============================================================
+   If this file reaches more than 500 lines, split it into
+   2 or more files to prevent bloating. Code belongs BELOW.
+   ============================================================ */
+
+/* ── Inputs ───────────────────────────────────────────────────────────────── */
+.input {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.4rem 0.6rem;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.85rem;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.input:focus {
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 0 2px rgba(204, 112, 0, 0.25);
+}
+.input::placeholder { color: var(--muted); }
+.input--sm { width: auto; }
+.input--xs { width: 70px; }
+
+.form-row   { display: flex; gap: 0.5rem; align-items: center; }
+.form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.form-label { color: var(--muted); font-size: 0.8rem; letter-spacing: 0.03em; }
+
+/* ── AdminPanel ───────────────────────────────────────────────────────────── */
+.panel { display: flex; flex-direction: column; flex: 1; }
+
+.panel__header {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.panel__header h2 { flex: 1; }
+
+.panel__tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+  background: var(--surface);
+}
+
+.tab {
+  background: none; border: none;
+  color: var(--muted);
+  padding: 0.6rem 1rem;
+  cursor: pointer; font-family: var(--font);
+  border-bottom: 2px solid transparent;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  transition: color 0.15s;
+}
+.tab:hover   { color: var(--text); }
+.tab--active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab--claim  {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  animation: pulse-claim 2s ease-in-out infinite;
+}
+@keyframes pulse-claim {
+  0%, 100% { box-shadow: 0 0 4px rgba(204, 112, 0, 0.3); }
+  50%      { box-shadow: 0 0 12px rgba(204, 112, 0, 0.7), inset 0 -2px 0 var(--accent); }
+}
+
+.panel__section {
+  padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; overflow-y: auto;
+}
+
+.stats-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.stat {
+  background: var(--surface);
+  border: 1px solid rgba(204, 112, 0, 0.3);
+  border-radius: 4px; padding: 0.75rem 1rem;
+  transition: border-color 0.15s;
+}
+.stat:hover       { border-color: var(--accent); }
+.stat__label      { color: var(--muted); font-size: 0.75rem; display: block; margin-bottom: 0.25rem; }
+.stat__value      { color: var(--accent2); font-size: 1.1rem; text-shadow: var(--glow-sm); }
+
+.action-card {
+  background: var(--surface);
+  border: 1px solid rgba(204, 112, 0, 0.25);
+  border-radius: 4px; padding: 1rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  transition: border-color 0.15s;
+}
+.action-card:hover         { border-color: var(--accent); }
+.action-card--danger       { border-color: rgba(204, 34, 0, 0.5); }
+.action-card--danger:hover { border-color: var(--danger); }
+.action-card h4            { color: var(--text); font-size: 0.9rem; }
+
+.expiry-options { display: flex; flex-direction: column; gap: 0.4rem; }
+.radio-row      { display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.85rem; }
+.radio-row:hover { color: var(--accent); }
+
+/* ============================================================
+   Code belongs ABOVE this comment. If this file reaches more
+   than 500 lines, split it into 2 or more files.
+   ============================================================ */

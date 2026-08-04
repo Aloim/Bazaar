@@ -1,0 +1,20 @@
+# netlify.toml — read by the Netlify CLI when deploying from bazaar-frontend/.
+#
+# publish:   the prebuilt static folder assembled by multi-app-deploy.yml
+#            (wiped + rebuilt every deploy — never put sources inside it).
+# functions: serverless function sources, bundled by the CLI (esbuild) at
+#            deploy time; dependencies resolve from bazaar-frontend/node_modules.
+#
+# Deploy command (from bazaar-frontend/):  netlify deploy --prod
+# One-time setup:                          netlify login && netlify link
+#
+# The gas-sponsor function additionally needs GAS_SPONSOR_PRIVATE_KEY set in the
+# Netlify UI (Site configuration -> Environment variables). See
+# netlify-functions/gas-sponsor.mts for all supported env vars.
+
+[build]
+  publish = "netlify-deploy"
+
+[functions]
+  directory = "netlify-functions"
+  node_bundler = "esbuild"
