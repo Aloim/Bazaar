@@ -7,9 +7,12 @@ Players run shops, complete missions, trade, govern tribes, and **see and chat w
 > **Status:** live on **Sui testnet**. On-chain IDs in the config are public and point at the current testnet deployment.
 
 > [!IMPORTANT]
-> **Deploying your own copy?** The DApp-owner wallet is not auto-detected — you must
-> claim/set it to **your own** wallet, or your deployment still treats the original
-> maintainer's testnet wallet as "the owner." See
+> **Deploying your own copy?** Ownership isn't automatic. Publishing creates a
+> `DAppOwnerCap` that's claimed **first-come-first-served on-chain** — claim it into
+> **your own** wallet with a CLI PTB right after you publish, or your fresh deployment
+> stays ownerless. (If you skip publishing and just run the frontend against the
+> bundled testnet IDs, you're using the live deployment the maintainer already owns —
+> that's expected, not a bug.) See
 > [Deploying to Sui testnet](#deploying-to-sui-testnet) below before you publish.
 
 ---
@@ -243,27 +246,25 @@ Full recipe with exact commands: **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**. I
    Skip this and players just pay their own testnet gas.
 
 > [!IMPORTANT]
-> **The DApp owner is not auto-detected from your deployment — two separate things need
-> your own wallet address, or the dApp keeps "belonging" to the original maintainer's
-> testnet wallet:**
+> **Ownership doesn't happen automatically — one required step, one optional cosmetic one:**
 >
-> 1. **`DAppOwnerCap` ownership.** Publish creates exactly one `DAppOwnerCap`, sealed
->    inside a shared `DAppOwnerClaimBox` (`dapp_hub::dapp_governance`). Claiming it is
->    genuinely first-come-first-served on-chain and **not** hardcoded in Move — but
->    claim it via a **CLI PTB right after publish** (exact command in
+> 1. **`DAppOwnerCap` ownership (required).** Publish creates exactly one `DAppOwnerCap`,
+>    sealed inside a shared `DAppOwnerClaimBox` (`dapp_hub::dapp_governance`). Claiming it is
+>    genuinely first-come-first-served on-chain — **not** hardcoded in Move, and **not**
+>    automatic. Claim it via a **CLI PTB right after publish** (exact command in
 >    [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md#dapp-ownership)), which is what every past
 >    deploy of this project has actually done. There *is* a "Claim Ownership" button in
 >    the frontend wallet bar, but it only enables once the connecting wallet already
 >    owns a registered SSU's `OwnerCap` — which won't be true immediately after a fresh
 >    publish — so don't rely on it as your first step; see the doc for the full caveat.
 >    Either way, if you route the cap manually, use **your own** address, not one you
->    find in old deploy notes/scripts.
-> 2. **`VITE_DAPPHUB_OWNER_ADDRESS`** (each app's `.env`) — the wallet auto-equipped
->    with a cosmetic "red-tribal" skin. It has no bearing on actual permissions (those
->    are all capability-gated on-chain, per the [roles diagram above](#governance--roles)) —
->    it's purely cosmetic. Set it in your `.env` to your own owner wallet; if you leave
->    it unset, nobody in your deployment gets the cosmetic (harmless, but pointless) —
->    it never falls back to any wallet baked into this repo.
+>    find in old deploy notes/scripts. If you don't publish your own packages at all and
+>    just run the frontend against the bundled testnet IDs, this cap is already claimed
+>    by the maintainer's wallet on the live shared deployment — that's expected, not a bug.
+> 2. **`VITE_DAPPHUB_OWNER_ADDRESS`** (each app's `.env`, optional/cosmetic) — the wallet
+>    auto-equipped with a cosmetic "red-tribal" skin. It has no bearing on actual permissions
+>    (those are all capability-gated on-chain, per the [roles diagram above](#governance--roles)).
+>    It has no fallback baked into this repo: leave it unset and nobody gets the cosmetic.
 
 ## Multiplayer
 
