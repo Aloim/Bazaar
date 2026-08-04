@@ -43,12 +43,12 @@ export const RESERVED_OWNER_SKIN = "red-tribal";
 /**
  * The DappHub owner's wallet address. This wallet is auto-granted the reserved
  * red-tribal warpaint in every bazaar (compared case-insensitively).
- * Override via VITE_DAPPHUB_OWNER_ADDRESS in .env for your own deployment —
- * the literal below is only a fallback for this project's own testnet instance.
+ * Set via VITE_DAPPHUB_OWNER_ADDRESS in .env — see README.md "Deploying to Sui
+ * testnet". Unset means no wallet gets the cosmetic (never falls back to the
+ * original maintainer's wallet).
  */
 export const DAPPHUB_OWNER_ADDRESS =
-  (import.meta.env.VITE_DAPPHUB_OWNER_ADDRESS as string | undefined) ??
-  "0xa7b4d815d21f3ba225a7773cdd8878673b4436b040f6fa1956345a8bfcaf7f77";
+  (import.meta.env.VITE_DAPPHUB_OWNER_ADDRESS as string | undefined) ?? "";
 
 export const PLAYER_SKINS: PlayerSkin[] = [
   { slug: "grey", name: "Ash Drifter", blurb: "Standard issue. Forgettable on purpose.", thumb: grey },

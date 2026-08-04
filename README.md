@@ -262,8 +262,8 @@ Full recipe with exact commands: **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**. I
 >    with a cosmetic "red-tribal" skin. It has no bearing on actual permissions (those
 >    are all capability-gated on-chain, per the [roles diagram above](#governance--roles)) —
 >    it's purely cosmetic. Set it in your `.env` to your own owner wallet; if you leave
->    it unset it falls back to this project's own testnet wallet, which just means
->    nobody in your deployment gets the cosmetic (harmless, but pointless).
+>    it unset, nobody in your deployment gets the cosmetic (harmless, but pointless) —
+>    it never falls back to any wallet baked into this repo.
 
 ## Multiplayer
 
